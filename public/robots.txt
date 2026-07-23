@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://hayanuka.life/sitemap-index.xml
+Sitemap: https://hayanuka.life/sitemap-shiurim.xml

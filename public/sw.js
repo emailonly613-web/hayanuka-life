@@ -1,7 +1,7 @@
 // hayanuka.life service worker — app shell + data cache.
 // V is stamped per deploy by scripts/stamp-sw.mjs so every release busts the cache
 // (a fixed name left phones on the first version forever — the tefillos-missing bug).
-const V = "hy-1784797076790";
+const V = "hy-1784798469305";
 const SHELL = ["/", "/app.js", "/player.js", "/manifest.webmanifest", "/img/icon-192.png", "/img/icon-512.png",
   "/data/curated.json", "/data/music.json", "/data/alonim.json", "/data/tfilot.json", "/data/facets.json", "/data/tefillot-latest.json"];
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });

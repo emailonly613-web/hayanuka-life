@@ -6,3 +6,6 @@ tools
 Dockerfile
 nginx.conf
 .dockerignore
+
+public/shiur/
+public/sitemap-shiurim.xml

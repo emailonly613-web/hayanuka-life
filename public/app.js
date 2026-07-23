@@ -84,7 +84,7 @@
   }
 
   // ---- full library
-  let LIB = [], view = [], shown = 0; const PAGE = 60;
+  let LIB = [], view = [], shown = 0; const PAGE = matchMedia("(max-width:680px)").matches ? 24 : 60;
   function card(v) {
     const [id, he, chan] = v;
     return `<article class="li"><button class="li-thumb" data-watch="${id}" data-title="${esc(he)}"><img data-thumb="${id}" alt="" loading="lazy"><span class="play">▸</span></button>`
@@ -134,7 +134,11 @@
     const n = Object.keys(MEDIA).length;
     if (n) { const b = $("#readyCount"); if (b) b.textContent = n.toLocaleString("en-US"); }
     // marquee needs LIB titles — build once the library json lands (initLib fetch), retry briefly
-    let tries = 0; const t = setInterval(() => { if (LIB.length || ++tries > 20) { clearInterval(t); buildMarquee(); } }, 250);
+    let tries = 0; const t = setInterval(() => { if (LIB.length || ++tries > 20) { clearInterval(t); buildMarquee();
+      // ?play=<id> deep link (from the per-shiur SEO pages)
+      const pid = new URLSearchParams(location.search).get("play");
+      if (pid && window.HY) { const row = LIB.find((v) => v[0] === pid); window.HY.play(pid, row ? row[1] : pid); }
+    } }, 250);
   });
 })();
 
@@ -181,6 +185,25 @@
     const p = Math.min(1, Math.max(0, (innerHeight * 0.82 - r.top) / (innerHeight * 0.55)));
     const n = Math.round(p * hlSpans.length);
     for (let i = 0; i < hlSpans.length; i++) hlSpans[i].classList.toggle("lit", i < n);
+  }
+
+  // promise cards: staggered 3D pop when they actually enter the screen
+  const pcards = document.querySelectorAll(".promise-card");
+  if (pcards.length) {
+    const po = new IntersectionObserver((es) => { for (const e of es) { if (e.isIntersecting) { e.target.classList.add("pop"); po.unobserve(e.target); } } }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
+    pcards.forEach((c) => po.observe(c));
+    if (reduced) pcards.forEach((c) => c.classList.add("pop"));
+  }
+
+  // mobile section nav: scrollspy highlight
+  const mnav = document.getElementById("mnav");
+  if (mnav) {
+    const links = [...mnav.querySelectorAll("a")];
+    const secs = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+    const so = new IntersectionObserver((es) => {
+      for (const e of es) if (e.isIntersecting) { const id = "#" + e.target.id; links.forEach((a) => a.classList.toggle("on", a.getAttribute("href") === id)); }
+    }, { rootMargin: "-25% 0px -65% 0px" });
+    secs.forEach((s) => so.observe(s));
   }
 
   // 3D tilt on cards (desktop pointers only)

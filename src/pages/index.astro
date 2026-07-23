@@ -30,6 +30,7 @@ const TICKER = [
 ];
 ---
 <Base>
+  <div id="sprog" aria-hidden="true"></div>
   <!-- ===== HEADER ===== -->
   <header class="site-head">
     <div class="wrap head-in">
@@ -55,11 +56,19 @@ const TICKER = [
     </div>
   </div>
 
+  <!-- ===== MOBILE SECTION NAV (phones only — the way around the long scroll) ===== -->
+  <nav class="mnav" id="mnav" aria-label="Jump to section">
+    {[["#torah","📖","Torah"],["#niggunim","🎵","Niggunim"],["#alonim","📜","Weekly"],["#tefillos","🕯","Tefillos"],["#story","✦","Story"],["#app","📲","App"],["#follow","💬","Follow"]].map(([h, ic, l]) => (
+      <a href={h}><i>{ic}</i>{l}</a>
+    ))}
+  </nav>
+
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-portrait kenburns" style="background-image:url('/img/main-3.jpeg')"></div>
     <div class="hero-veil" id="heroVeil"></div>
+    <canvas id="sparks" aria-hidden="true"></canvas>
     <div class="wrap hero-in" id="heroIn">
       <p class="eyebrow reveal">The official Torah of HaGaon Rav Shlomo Yehuda shlit”a</p>
       <h1 class="hero-title reveal">The Yanuka<span class="dot">.</span><br /><em>in English.</em></h1>
@@ -81,17 +90,17 @@ const TICKER = [
   <!-- ===== PROMISE / MOAT ===== -->
   <section class="promise" id="promise">
     <div class="wrap promise-in">
-      <div class="promise-card card reveal">
+      <div class="promise-card card">
         <span class="pc-ic">🌍</span>
         <h3>Everything, gathered into one home</h3>
         <p>His Torah is scattered in a thousand places. We tracked down every shiur we could find, <b>downloaded and kept every one</b>, and organized them into a single English home — so you never have to hunt again, and it's always here.</p>
       </div>
-      <div class="promise-card card reveal">
+      <div class="promise-card card">
         <span class="pc-ic">⬇︎</span>
         <h3>Watch or download — audio &amp; video</h3>
         <p>Every shiur, every niggun, ready to stream, or download in <b>video</b> for the screen or <b>audio-only</b> for the car and the walk. It's already saved and waiting.</p>
       </div>
-      <div class="promise-card card reveal">
+      <div class="promise-card card">
         <span class="pc-ic">✦</span>
         <h3>In English, at last</h3>
         <p>The Torah, the story, the weekly writings and the tefillos — organized and presented in English, the easiest way possible, so the Yanuka's light reaches everyone.</p>
@@ -342,4 +351,71 @@ const TICKER = [
 
   <script is:inline src="/player.js" defer></script>
   <script is:inline src="/app.js" defer></script>
+
+  <script>
+    // State-of-the-art motion layer — GSAP ScrollTrigger + ambient canvas + micro-interactions.
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const fine = matchMedia("(hover:hover) and (pointer:fine)").matches;
+
+    if (!reduced) {
+      gsap.registerPlugin(ScrollTrigger);
+      // gold scroll progress bar
+      gsap.to("#sprog", { scaleX: 1, ease: "none", scrollTrigger: { start: 0, end: "max", scrub: 0.3 } });
+      // curated rows drift gently sideways as you scroll (alternating)
+      gsap.utils.toArray(".torah .row").forEach((row, i) => {
+        gsap.fromTo(row, { x: i % 2 ? 26 : -26 }, { x: i % 2 ? -14 : 14, ease: "none",
+          scrollTrigger: { trigger: row, start: "top bottom", end: "bottom top", scrub: 0.6 } });
+      });
+      // niggunim + alonim tiles: staggered rise
+      for (const sel of [".nig", ".alon"]) {
+        ScrollTrigger.batch(sel, { start: "top 92%", once: true,
+          onEnter: (els) => gsap.fromTo(els, { y: 28, opacity: 0, scale: 0.97 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, stagger: 0.06, ease: "power3.out", overwrite: true }) });
+      }
+      // phone mockup leans in 3D with scroll
+      const ph = document.querySelector(".phone");
+      if (ph) gsap.fromTo(ph, { rotateY: -16, rotateX: 6 }, { rotateY: 10, rotateX: -4, ease: "none",
+        scrollTrigger: { trigger: ph, start: "top bottom", end: "bottom top", scrub: 0.5 } });
+
+      // ambient candle sparks in the hero (canvas)
+      const cv = document.getElementById("sparks");
+      if (cv) {
+        const x = cv.getContext("2d"); const dpr = Math.min(2, devicePixelRatio || 1);
+        let W, H, ps = [];
+        const size = () => { W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; x.setTransform(dpr, 0, 0, dpr, 0, 0); };
+        size(); addEventListener("resize", size);
+        const N = matchMedia("(max-width:820px)").matches ? 22 : 42;
+        const mk = () => ({ x: Math.random() * W, y: H + 10 + Math.random() * 40, r: 0.6 + Math.random() * 1.8,
+          vy: 0.12 + Math.random() * 0.35, vx: (Math.random() - 0.5) * 0.14, tw: Math.random() * Math.PI * 2, life: 0 });
+        for (let i = 0; i < N; i++) { const p = mk(); p.y = Math.random() * H; ps[i] = p; }
+        let vis = true;
+        new IntersectionObserver((e) => (vis = e[0].isIntersecting)).observe(cv);
+        (function tick() {
+          requestAnimationFrame(tick); if (!vis) return;
+          x.clearRect(0, 0, W, H);
+          for (let i = 0; i < ps.length; i++) {
+            const p = ps[i]; p.y -= p.vy; p.x += p.vx + Math.sin(p.tw + p.y * 0.012) * 0.08; p.tw += 0.02;
+            if (p.y < -12) ps[i] = mk();
+            const a = (0.25 + 0.55 * Math.abs(Math.sin(p.tw))) * Math.min(1, (H - p.y) / 120 + 0.4);
+            x.beginPath(); x.arc(p.x, p.y, p.r, 0, 7);
+            x.fillStyle = `rgba(228,196,130,${a * 0.5})`; x.shadowColor = "rgba(228,196,130,.8)"; x.shadowBlur = 8; x.fill(); x.shadowBlur = 0;
+          }
+        })();
+      }
+    }
+
+    // cursor glow + magnetic gold buttons (desktop only)
+    if (!reduced && fine) {
+      const glow = document.createElement("div"); glow.id = "cursor-glow"; document.body.appendChild(glow);
+      let gx = -400, gy = -400, tx = gx, ty = gy;
+      addEventListener("mousemove", (e) => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+      (function g() { gx += (tx - gx) * 0.12; gy += (ty - gy) * 0.12; glow.style.transform = `translate(${gx - 170}px, ${gy - 170}px)`; requestAnimationFrame(g); })();
+      document.querySelectorAll(".btn").forEach((b) => {
+        b.addEventListener("mousemove", (e) => { const r = b.getBoundingClientRect();
+          b.style.translate = `${(e.clientX - r.left - r.width / 2) * 0.12}px ${(e.clientY - r.top - r.height / 2) * 0.22}px`; });
+        b.addEventListener("mouseleave", () => { b.style.translate = ""; });
+      });
+    }
+  </script>
 </Base>
