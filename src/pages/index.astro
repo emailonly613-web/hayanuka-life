@@ -15,6 +15,9 @@ const byCat = {};
 for (const v of curated) (byCat[v.category] ||= []).push(v);
 
 const nf = (n) => new Intl.NumberFormat("en-US").format(n);
+// build-stamped script URLs: a NEW URL busts even a stale service worker's
+// cache-first hit — installed iOS/Android apps get fresh code on next open
+const BUILD_V = Date.now();
 const nav = [
   ["#story", "The Story"], ["#torah", "Torah"], ["#niggunim", "Niggunim"],
   ["#alonim", "Weekly Writings"], ["#tefillos", "Tefillos"], ["#follow", "Follow"],
@@ -381,8 +384,8 @@ const TICKER = [
     </div>
   </div>
 
-  <script is:inline src="/player.js" defer></script>
-  <script is:inline src="/app.js" defer></script>
+  <script is:inline src={`/player.js?v=${BUILD_V}`} defer></script>
+  <script is:inline src={`/app.js?v=${BUILD_V}`} defer></script>
 
   <script>
     // State-of-the-art motion layer — GSAP ScrollTrigger + ambient canvas + micro-interactions.
