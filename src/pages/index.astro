@@ -272,6 +272,7 @@ const TICKER = [
       <div class="tef-grid">
         {tfilot.map((t) => (
           <a class="tef card reveal" href={t.pdf} target="_blank" rel="noopener">
+            <span class="tef-cover"><img loading="lazy" src={`https://hayanuka-media.nyc3.cdn.digitaloceanspaces.com/covers/${t.id}.jpg`} alt="" onerror="this.closest('.tef').classList.add('no-cover')" /></span>
             <span class="tef-ic">{t.category === "Segulos" ? "✦" : "🕯"}</span>
             <div><b>{t.en}</b><small dir="rtl">{t.he}</small></div>
             <span class="tef-dl">Download ↓</span>

@@ -125,7 +125,9 @@
 
   // ---- alonim
   let AL = [], av = [], as = 0; const AP = 40;
-  function acard(a) { return `<a class="alon" href="${a.pdf}" target="_blank" rel="noopener"><span class="alon-ic">📜</span><b>${esc(a.en)}</b><small dir="rtl">${esc(a.he)}</small><span class="dl-a">Download PDF ↓ · ${esc(a.year)}</span></a>`; }
+  function acard(a) { return `<a class="alon" href="${a.pdf}" target="_blank" rel="noopener">`
+    + `<span class="alon-cover"><img loading="lazy" src="${CDN}/covers/${a.id}.jpg" alt="" onerror="this.closest('.alon').classList.add('no-cover')"></span>`
+    + `<span class="alon-body"><span class="alon-ic">📜</span><b>${esc(a.en)}</b><small dir="rtl">${esc(a.he)}</small><span class="dl-a">Open PDF ↓ · ${esc(a.year)}</span></span></a>`; }
   function amore() { $("#alonGrid").insertAdjacentHTML("beforeend", av.slice(as, as + AP).map(acard).join("")); as = Math.min(av.length, as + AP); $("#alonMore").hidden = as >= av.length; }
   function aapply() { const q = $("#alonSearch").value.trim().toLowerCase(); av = AL.filter((a) => !q || (a.en + " " + a.he).toLowerCase().includes(q)); $("#alonGrid").innerHTML = ""; as = 0; amore(); }
   function initAlon() { fetch("/data/alonim.json").then((r) => r.json()).then((d) => { AL = d; aapply(); }); let t; $("#alonSearch").addEventListener("input", () => { clearTimeout(t); t = setTimeout(aapply, 160); }); $("#alonMore").addEventListener("click", amore); }

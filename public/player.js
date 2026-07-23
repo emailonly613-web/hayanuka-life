@@ -214,6 +214,28 @@
   const flipMode = () => { const t = active.currentTime; const to = mode === "audio" ? "video" : "audio"; mode = to; play(cur, titleOf(cur), to, { theater: thOpen ? undefined : false }); setTimeout(() => { try { active.currentTime = t; } catch {} }, 350); };
   bar.querySelector("#hb-mode").onclick = flipMode;
   th.querySelector("#th-mode").onclick = flipMode;
+  // download chooser: ⬇ always offers BOTH formats (video + audio), whatever mode you're in
+  function pickDownload(near) {
+    const old = document.getElementById("hy-dlpick");
+    if (old) { const again = old.dataset.for === near.id; old.remove(); if (again) return; }
+    const m = document.createElement("div"); m.id = "hy-dlpick"; m.dataset.for = near.id;
+    const items = [];
+    if (has(cur, "v")) items.push(`<a href="${vurl(cur)}" download>🎬 Video (MP4)</a>`);
+    if (has(cur, "a")) items.push(`<a href="${aurl(cur)}" download>🎧 Audio (MP3)</a>`);
+    m.innerHTML = items.join("") || `<span class="dp-none">Still uploading — minutes away</span>`;
+    document.body.appendChild(m);
+    const r = near.getBoundingClientRect();
+    m.style.left = Math.max(8, Math.min(innerWidth - m.offsetWidth - 8, r.right - m.offsetWidth)) + "px";
+    m.style.top = Math.max(8, r.top - m.offsetHeight - 10) + "px";
+    const close = (e) => { if (!m.contains(e.target) && e.target !== near) { m.remove(); document.removeEventListener("click", close, true); } };
+    setTimeout(() => document.addEventListener("click", close, true));
+    m.addEventListener("click", (e) => { if (e.target.closest("a")) { toast("Downloading — it's yours to keep, offline."); setTimeout(() => m.remove(), 150); } });
+  }
+  for (const sel of ["#hb-dl", "#th-dl"]) {
+    const el = document.querySelector(sel);
+    el.addEventListener("click", (e) => { e.preventDefault(); pickDownload(el); });
+  }
+
   bar.querySelector("#hb-close").onclick = () => { active.pause(); bar.hidden = true; document.body.classList.remove("has-bar"); };
   bar.querySelector("#hb-save").onclick = () => toggleSave(cur);
   th.querySelector("#th-save").onclick = () => toggleSave(cur);
