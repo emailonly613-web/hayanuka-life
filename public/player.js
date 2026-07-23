@@ -158,14 +158,22 @@
   th.querySelector("#th-close").onclick = () => closeTheater();
   bar.querySelector("#hb-expand").onclick = () => { if (mode === "video") openTheater(); };
 
-  // ---- theater gestures: swipe / wheel / keys
-  let ty = null;
-  thStage.addEventListener("touchstart", (e) => { ty = e.touches[0].clientY; }, { passive: true });
-  thStage.addEventListener("touchend", (e) => {
-    if (ty == null) return; const d = ty - e.changedTouches[0].clientY; ty = null;
-    if (Math.abs(d) > 64) (d > 0 ? next() : prev());
-    else togglePlay();
-  }, { passive: true });
+  // ---- theater gestures: swipe ANYWHERE on the theater (any direction), tap to pause, drag on desktop
+  let gx = null, gy = null, gt = 0;
+  const gestureTarget = (e) => !e.target.closest("button, a, input, select, .th-search, .th-chips");
+  const beginG = (x, y) => { gx = x; gy = y; gt = Date.now(); };
+  const endG = (x, y, tapOk) => {
+    if (gx == null) return; const dx = gx - x, dy = gy - y; gx = gy = null;
+    const ax = Math.abs(dx), ay = Math.abs(dy);
+    if (ay > 56 && ay >= ax) { dy > 0 ? next() : prev(); return; }   // swipe up = next · down = back
+    if (ax > 56) { dx > 0 ? next() : prev(); return; }               // swipe left = next · right = back
+    if (tapOk && Date.now() - gt < 350) togglePlay();
+  };
+  th.addEventListener("touchstart", (e) => { if (gestureTarget(e)) beginG(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
+  th.addEventListener("touchend", (e) => { const t = e.changedTouches[0]; endG(t.clientX, t.clientY, !!e.target.closest(".th-stage")); }, { passive: true });
+  // desktop: drag the stage like a phone
+  th.addEventListener("mousedown", (e) => { if (gestureTarget(e) && e.target.closest(".th-stage")) beginG(e.clientX, e.clientY); });
+  th.addEventListener("mouseup", (e) => endG(e.clientX, e.clientY, !!e.target.closest(".th-stage")));
   let wheelLock = 0;
   th.addEventListener("wheel", (e) => { const now = Date.now(); if (now - wheelLock < 650) return; wheelLock = now; e.deltaY > 0 ? next() : prev(); }, { passive: true });
   document.addEventListener("keydown", (e) => {

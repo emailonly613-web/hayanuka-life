@@ -408,8 +408,11 @@ body.has-bar { padding-bottom: 92px; }
 .dp-none { padding: .6em .8em; font-size: .84rem; color: var(--ink-soft); }
 
 /* ===== FULL-SCREEN THEATER (the feed player) ===== */
-body.th-open { overflow: hidden; }
-#hy-th { position: fixed; inset: 0; z-index: 85; background: #04060c; display: flex; flex-direction: column; }
+body.th-open { overflow: hidden; overscroll-behavior: none; }
+/* touch-action none = WE own every gesture (no browser scroll/refresh stealing the swipe) */
+#hy-th { position: fixed; inset: 0; z-index: 85; background: #04060c; display: flex; flex-direction: column; touch-action: none; overscroll-behavior: none; }
+.th-chips { touch-action: pan-x; }
+.th-search, .th-results { touch-action: pan-y; }
 .th-top { position: absolute; top: 0; left: 0; right: 0; z-index: 4; display: flex; align-items: center; gap: 10px; padding: calc(10px + env(safe-area-inset-top)) 12px 10px; background: linear-gradient(180deg, rgba(4,6,12,.85), transparent); }
 #th-close, #th-searchbtn { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 12px; border: 1px solid rgba(216,185,118,.3); background: rgba(4,6,12,.5); color: var(--gold-bright); font-size: 1.25rem; cursor: pointer; backdrop-filter: blur(8px); }
 .th-chips { flex: 1; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
