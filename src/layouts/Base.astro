@@ -1,0 +1,85 @@
+---
+import "../styles/global.css";
+const {
+  title = "The Yanuka — Torah, Niggunim & Tefillah in English",
+  description = "The world's home for the Torah, niggunim, tefillos and writings of HaGaon Rav Shlomo Yehuda Beeri shlit”a — the Yanuka. Every shiur, in English, free to watch, listen and download.",
+} = Astro.props;
+const GA4 = "G-HAYANUKALIFE"; // replace with the real GA4 Measurement ID once created
+const canonical = new URL(Astro.url.pathname, "https://hayanuka.life").href;
+const ld = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": "https://hayanuka.life/#website", url: "https://hayanuka.life/", name: "The Yanuka — Torah in English", inLanguage: "en", description,
+      potentialAction: { "@type": "SearchAction", target: "https://hayanuka.life/?q={search_term_string}", "query-input": "required name=search_term_string" } },
+    { "@type": "Person", "@id": "https://hayanuka.life/#yanuka", name: "Rav Shlomo Yehuda Beeri", alternateName: ["The Yanuka", "HaGaon HaTzaddik HaYanuka"], jobTitle: "Torah scholar and teacher", description: "A Torah luminary known as ‘the Yanuka’, teaching Torah, composing niggunim and tefillos.", sameAs: [
+      "https://www.instagram.com/hayanuka", "https://www.facebook.com/hayanuka", "https://hayanuka.com" ] },
+    { "@type": "Organization", "@id": "https://hayanuka.life/#org", name: "hayanuka.life", url: "https://hayanuka.life/", logo: "https://hayanuka.life/img/main-3.jpeg" },
+  ],
+};
+---
+<!-- page content is injected by Astro into <html> automatically at build; this layout renders the shell -->
+<html lang="en" class="grain">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta property="og:site_name" content="The Yanuka — Torah in English" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://hayanuka.life/img/main-3.jpeg" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://hayanuka.life/img/main-3.jpeg" />
+    <meta name="theme-color" content="#0a0e1a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/img/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="The Yanuka" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+    <!-- GA4 -->
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4}`}></script>
+    <script is:inline define:vars={{ GA4 }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", GA4, { anonymize_ip: true });
+    </script>
+    <link rel="preconnect" href="https://hayanuka-media.nyc3.cdn.digitaloceanspaces.com" crossorigin />
+    <style is:inline>
+      /* fonts inlined-lite: rely on system serif fallback; @font-face optional here */
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Assistant:wght@400;600;700&display=swap");
+    </style>
+    <script is:inline>
+      (function(){ try {
+        var t = localStorage.getItem("hy-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch(e){} })();
+    </script>
+  </head>
+  <body>
+    <slot />
+    <script is:inline>
+      // Scroll reveal
+      const io = new IntersectionObserver((es)=>{ for(const e of es){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} } }, {threshold:.12});
+      requestAnimationFrame(()=>document.querySelectorAll(".reveal").forEach(el=>io.observe(el)));
+      // Theme toggle
+      window.toggleTheme = function(){
+        const cur = document.documentElement.getAttribute("data-theme")==="light" ? "" : "light";
+        if(cur) document.documentElement.setAttribute("data-theme",cur); else document.documentElement.removeAttribute("data-theme");
+        try{ localStorage.setItem("hy-theme", cur); }catch(e){}
+      };
+      // PWA service worker
+      if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(()=>{}));
+    </script>
+  </body>
+</html>

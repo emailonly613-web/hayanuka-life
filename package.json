@@ -1,0 +1,11 @@
+{
+  "name": "hayanuka-life",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "astro dev", "build": "astro build", "preview": "astro preview" },
+  "dependencies": {
+    "astro": "^5.6.1",
+    "@astrojs/sitemap": "^3.3.0",
+    "gsap": "^3.12.5"
+  }
+}

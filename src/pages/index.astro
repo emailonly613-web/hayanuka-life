@@ -1,0 +1,286 @@
+---
+import Base from "../layouts/Base.astro";
+import { STORY_EN, SOCIALS, CATEGORIES_EN, ALON_SERIES_EN } from "../../data/en-content.mjs";
+import site from "../../data/site-data.json";
+import "../styles/home.css";
+
+const counts = site.counts;
+const curated = site.curated;
+const music = site.music;
+const alonim = site.alonim;
+const tfilot = site.tfilot;
+
+// group curated by english category
+const byCat = {};
+for (const v of curated) (byCat[v.category] ||= []).push(v);
+
+const nf = (n) => new Intl.NumberFormat("en-US").format(n);
+const nav = [
+  ["#story", "The Story"], ["#torah", "Torah"], ["#niggunim", "Niggunim"],
+  ["#alonim", "Weekly Writings"], ["#tefillos", "Tefillos"], ["#follow", "Follow"],
+];
+---
+<Base>
+  <!-- ===== HEADER ===== -->
+  <header class="site-head">
+    <div class="wrap head-in">
+      <a class="brand" href="/">
+        <span class="brand-mark">ה</span>
+        <span class="brand-txt"><b>The Yanuka</b><small>Torah in English</small></span>
+      </a>
+      <nav class="head-nav">
+        {nav.map(([h, l]) => <a href={h}>{l}</a>)}
+      </nav>
+      <div class="head-cta">
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle light and dark">☾</button>
+        <a class="btn btn-gold sm" href="#torah">Explore</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-portrait" style="background-image:url('/img/main-3.jpeg')"></div>
+    <div class="hero-veil"></div>
+    <div class="wrap hero-in">
+      <p class="eyebrow reveal">The official Torah of HaGaon Rav Shlomo Yehuda shlit”a</p>
+      <h1 class="hero-title reveal">The Yanuka<span class="dot">.</span><br /><em>in English.</em></h1>
+      <p class="hero-quote reveal">{STORY_EN.epigraph}</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-gold" href="#torah">▸ Watch the Shiurim</a>
+        <a class="btn btn-ghost" href="#follow">Follow &amp; Subscribe</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div><b data-count={counts.library}>0</b><span>videos, indexed</span></div>
+        <div><b data-count={counts.alonim}>0</b><span>weekly writings</span></div>
+        <div><b data-count={counts.tfilot + counts.music}>0</b><span>tefillos &amp; niggunim</span></div>
+        <div><b>1</b><span>place, all of it</span></div>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#promise" aria-label="Scroll">⌄</a>
+  </section>
+
+  <!-- ===== PROMISE / MOAT ===== -->
+  <section class="promise" id="promise">
+    <div class="wrap promise-in">
+      <div class="promise-card card reveal">
+        <span class="pc-ic">🌍</span>
+        <h3>Everything, gathered into one home</h3>
+        <p>His Torah is scattered in a thousand places. We tracked down every shiur we could find, <b>downloaded and kept every one</b>, and organized them into a single English home — so you never have to hunt again, and it's always here.</p>
+      </div>
+      <div class="promise-card card reveal">
+        <span class="pc-ic">⬇︎</span>
+        <h3>Watch or download — audio &amp; video</h3>
+        <p>Every shiur, every niggun, ready to stream, or download in <b>video</b> for the screen or <b>audio-only</b> for the car and the walk. It's already saved and waiting.</p>
+      </div>
+      <div class="promise-card card reveal">
+        <span class="pc-ic">✦</span>
+        <h3>In English, at last</h3>
+        <p>The Torah, the story, the weekly writings and the tefillos — organized and presented in English, the easiest way possible, so the Yanuka's light reaches everyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="story" id="story">
+    <div class="wrap story-in">
+      <div class="story-media reveal">
+        <img src="/img/1000638653.jpg" alt="Sefer of the Yanuka" loading="lazy" />
+        <div class="story-badge">{STORY_EN.name}</div>
+      </div>
+      <div class="story-txt">
+        <p class="eyebrow reveal">The Story</p>
+        <h2 class="reveal">{STORY_EN.title}</h2>
+        {STORY_EN.sections.map((s) => (
+          <div class="story-sec reveal">
+            <h3>{s.heading}</h3>
+            {s.paragraphs.map((p) => <p>{p}</p>)}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TORAH LIBRARY ===== -->
+  <section class="torah" id="torah">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">The Library · every shiur, in one place</p>
+        <h2>The Torah of the Yanuka</h2>
+        <p class="sec-sub">All <b>{nf(counts.library)}</b> videos we found across every channel — searchable, watchable, downloadable in audio or video.</p>
+      </div>
+
+      <!-- featured curated rows -->
+      {Object.entries(byCat).map(([c, vids]) => (
+        <div class="row reveal">
+          <div class="row-head"><h3>{c}</h3><span>{CATEGORIES_EN[Object.keys(CATEGORIES_EN).find(k=>CATEGORIES_EN[k].en===c)]?.sub || ""}</span></div>
+          <div class="row-scroll">
+            {vids.map((v) => (
+              <article class="vcard" data-id={v.id}>
+                <button class="vthumb" data-watch={v.id} data-title={v.he} aria-label={"Play " + v.en}>
+                  <img data-thumb={v.id} alt="" loading="lazy" />
+                  <span class="play">▸</span>
+                </button>
+                <div class="vmeta">
+                  <p class="vtitle">{v.en}</p>
+                  <p class="vhe" dir="rtl">{v.he}</p>
+                  <div class="vacts">
+                    <button class="chip" data-watch={v.id} data-title={v.he}>Watch</button>
+                    <button class="chip" data-listen={v.id} data-title={v.he}>Listen</button>
+                    <div class="dl">
+                      <button class="chip dl-btn">↓</button>
+                      <div class="dl-menu">
+                        <a data-dl={v.id} data-fmt="video">🎬 Video (MP4)</a>
+                        <a data-dl={v.id} data-fmt="audio">🎧 Audio (MP3)</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <!-- full searchable index -->
+      <div class="lib reveal">
+        <div class="lib-controls">
+          <input id="libSearch" type="search" placeholder="Search all shiurim by title (Hebrew or English)…" autocomplete="off" />
+          <select id="libChannel"><option value="">All channels</option></select>
+          <span id="libCount" class="lib-count"></span>
+        </div>
+        <div id="libGrid" class="lib-grid"></div>
+        <button id="libMore" class="btn btn-ghost lib-more" hidden>Show more</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NIGGUNIM ===== -->
+  <section class="niggunim" id="niggunim">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Niggunim · melodies of the soul</p>
+        <h2>Niggunei HaYanuka</h2>
+        <p class="sec-sub">The melodies he plays and composes — for the heart, for the road, for the quiet hour.</p>
+      </div>
+      <div class="nig-grid">
+        {music.map((m) => (
+          <button class="nig" data-watch={m.mid} data-title={m.he}>
+            <img data-thumb={m.mid} alt="" loading="lazy" />
+            <span class="nig-play">▸</span>
+            <div class="nig-meta"><b>{m.en}</b><small dir="rtl">{m.he}</small></div>
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALONIM ===== -->
+  <section class="alonim" id="alonim">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Weekly Writings · {ALON_SERIES_EN}</p>
+        <h2>The Weekly Alonim</h2>
+        <p class="sec-sub"><b>{counts.alonim}</b> weekly Torah sheets from the Rav's table — free to read and download.</p>
+      </div>
+      <div class="alon-controls">
+        <input id="alonSearch" type="search" placeholder="Search by parashah…" autocomplete="off" />
+      </div>
+      <div id="alonGrid" class="alon-grid"></div>
+      <button id="alonMore" class="btn btn-ghost lib-more" hidden>Show more</button>
+    </div>
+  </section>
+
+  <!-- ===== TEFILLOS ===== -->
+  <section class="tefillos" id="tefillos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Tefillos &amp; Segulos</p>
+        <h2>Prayers Composed by the Yanuka</h2>
+        <p class="sec-sub">Tefillos and segulos he composed — for healing, parnassah, a zivug, children, and more.</p>
+      </div>
+      <div class="tef-grid">
+        {tfilot.map((t) => (
+          <a class="tef card reveal" href={t.pdf} target="_blank" rel="noopener">
+            <span class="tef-ic">{t.category === "Segulos" ? "✦" : "🕯"}</span>
+            <div><b>{t.en}</b><small dir="rtl">{t.he}</small></div>
+            <span class="tef-dl">Download ↓</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GET THE APP ===== -->
+  <section class="getapp" id="app">
+    <div class="wrap getapp-in">
+      <div class="getapp-txt reveal">
+        <p class="eyebrow">The App · take the whole hub with you</p>
+        <h2>Install the Yanuka app</h2>
+        <p class="sec-sub">Put all {new Intl.NumberFormat("en-US").format(counts.library)} shiurim, the niggunim and the weekly writings on your home screen — one tap, works offline, no App Store needed.</p>
+        <div class="getapp-cta">
+          <button id="installBtn" class="btn btn-gold" hidden>⬇︎ Install the App</button>
+          <a id="apkBtn" class="btn btn-gold" href="/app/hayanuka.apk" download hidden>🤖 Download for Android (APK)</a>
+          <button id="iosBtn" class="btn btn-ghost">🍎 Add on iPhone</button>
+          <a class="btn btn-ghost" href="#torah">Open in browser</a>
+        </div>
+        <p id="installHint" class="getapp-hint"></p>
+      </div>
+      <div class="getapp-phone reveal" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-scr">
+            <div class="phone-top"><span class="phone-mark">ה</span><b>The Yanuka</b></div>
+            <div class="phone-hero"><span>▸</span></div>
+            <div class="phone-rows"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOLLOW ===== -->
+  <section class="follow" id="follow">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Follow &amp; Subscribe</p>
+        <h2>Stay connected to the Yanuka</h2>
+        <p class="sec-sub">Every channel and group, in one place. Subscribe, follow, and support the mosdos.</p>
+      </div>
+      <div class="soc-grid">
+        {SOCIALS.map((s) => (
+          <a class="soc card reveal" href={s.url} target="_blank" rel="noopener">
+            <div class="soc-l"><b>{s.label}</b><small>{s.handle}</small></div>
+            <span class="soc-cta">{s.cta} →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-foot">
+    <div class="wrap foot-in">
+      <div>
+        <div class="brand"><span class="brand-mark">ה</span><span class="brand-txt"><b>hayanuka.life</b><small>the Torah of the Yanuka, in English</small></span></div>
+        <p class="foot-note">An English home for the Torah, niggunim and tefillos of HaGaon Rav Shlomo Yehuda Beeri shlit”a. All content belongs to the Yanuka and his mosdos, brought here with love and with links back to the official channels.</p>
+      </div>
+      <div class="foot-links">
+        <a href="https://hayanuka.com" target="_blank" rel="noopener">Official Site (Hebrew) →</a>
+        <a href="https://hayanuka.com/he/donate" target="_blank" rel="noopener">Support the Mosdos →</a>
+      </div>
+    </div>
+    <div class="wrap foot-bottom"><span>© {new Date().getFullYear()} · Made for the spreading of Torah · לזכות הרבים</span></div>
+  </footer>
+
+  <!-- ===== PLAYER MODAL ===== -->
+  <div id="player" class="player" hidden>
+    <button class="player-close" aria-label="Close">✕</button>
+    <div class="player-box"><div class="player-frame" id="playerFrame"></div></div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast" hidden></div>
+
+  <script is:inline src="/app.js" defer></script>
+</Base>

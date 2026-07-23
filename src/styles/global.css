@@ -1,0 +1,58 @@
+/* hayanuka.life — design system.
+   Palette: deep midnight ground, warm parchment ink, luminous gold accent.
+   The Yanuka's world: candlelight on old sefarim, a piano at night, gold letters. */
+:root {
+  --ink: #f4ecd8;            /* parchment text on dark */
+  --ink-soft: #cdc3ab;
+  --ground: #0a0e1a;         /* midnight */
+  --ground-2: #111726;
+  --panel: #161d30;
+  --panel-2: #1d2740;
+  --line: rgba(214, 189, 122, 0.16);
+  --gold: #d8b976;           /* luminous gold */
+  --gold-bright: #f0d99a;
+  --gold-deep: #a3823f;
+  --wine: #7c2b3b;
+  --sky: #7fb4d8;
+  --radius: 18px;
+  --shadow: 0 24px 60px -20px rgba(0,0,0,.7);
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  --font-body: "Assistant", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --maxw: 1180px;
+}
+:root[data-theme="light"] {
+  --ink: #201a10; --ink-soft: #574c34;
+  --ground: #f6f1e6; --ground-2: #efe7d5; --panel: #fffdf7; --panel-2: #f4ecd9;
+  --line: rgba(120, 96, 40, 0.2); --gold: #a3823f; --gold-bright: #8a6c2f; --shadow: 0 20px 50px -24px rgba(80,60,20,.35);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }  /* author display rules must never defeat the hidden attribute */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.65;
+  overflow-x: hidden; text-rendering: optimizeLegibility;
+}
+h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: .01em; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+.eyebrow { font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.btn {
+  display: inline-flex; align-items: center; gap: .5em; padding: .8em 1.5em; border-radius: 999px;
+  font-weight: 700; font-size: .95rem; cursor: pointer; border: 1px solid transparent; transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background .25s;
+}
+.btn-gold { background: linear-gradient(135deg, var(--gold-bright), var(--gold)); color: #23180a; box-shadow: 0 10px 30px -8px rgba(216,185,118,.5); }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -8px rgba(216,185,118,.65); }
+.btn-ghost { border-color: var(--line); color: var(--ink); }
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); transform: translateY(-2px); }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } html { scroll-behavior:auto; } }
+:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--gold); color: #1a1206; }
+.card { background: linear-gradient(160deg, var(--panel), var(--panel-2)); border: 1px solid var(--line); border-radius: var(--radius); }
+.grain::before {
+  content:""; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: .04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
