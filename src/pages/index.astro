@@ -19,13 +19,22 @@ const nav = [
   ["#story", "The Story"], ["#torah", "Torah"], ["#niggunim", "Niggunim"],
   ["#alonim", "Weekly Writings"], ["#tefillos", "Tefillos"], ["#follow", "Follow"],
 ];
+const waEn = SOCIALS.find((s) => s.key === "whatsapp-en")?.url || "#follow";
+const TICKER = [
+  "New shiurim added every week",
+  "Every video — watch, listen, download, keep",
+  `${nf(counts.library)} shiurim, gathered into one home`,
+  "His tefillos — free to read, download and print",
+  "Join the English WhatsApp group",
+  "Niggunim for the road and the quiet hour",
+];
 ---
 <Base>
   <!-- ===== HEADER ===== -->
   <header class="site-head">
     <div class="wrap head-in">
       <a class="brand" href="/">
-        <span class="brand-mark">ה</span>
+        <img class="brand-mark" src="/favicon.svg" alt="" width="38" height="38" />
         <span class="brand-txt"><b>The Yanuka</b><small>Torah in English</small></span>
       </a>
       <nav class="head-nav">
@@ -39,12 +48,19 @@ const nav = [
     </div>
   </header>
 
+  <!-- ===== ANNOUNCEMENT TICKER ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      {[...TICKER, ...TICKER].map((t) => <span class="tk"><i>✦</i>{t}</span>)}
+    </div>
+  </div>
+
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-bg" id="heroBg"></div>
-    <div class="hero-portrait" style="background-image:url('/img/main-3.jpeg')"></div>
-    <div class="hero-veil"></div>
-    <div class="wrap hero-in">
+    <div class="hero-portrait kenburns" style="background-image:url('/img/main-3.jpeg')"></div>
+    <div class="hero-veil" id="heroVeil"></div>
+    <div class="wrap hero-in" id="heroIn">
       <p class="eyebrow reveal">The official Torah of HaGaon Rav Shlomo Yehuda shlit”a</p>
       <h1 class="hero-title reveal">The Yanuka<span class="dot">.</span><br /><em>in English.</em></h1>
       <p class="hero-quote reveal">{STORY_EN.epigraph}</p>
@@ -81,6 +97,20 @@ const nav = [
         <p>The Torah, the story, the weekly writings and the tefillos — organized and presented in English, the easiest way possible, so the Yanuka's light reaches everyone.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ===== MISSION (scroll-lit text) ===== -->
+  <section class="mission" id="mission">
+    <div class="wrap mission-in">
+      <p class="eyebrow reveal">Why this home exists</p>
+      <p class="hl" id="hlText">He sits and learns, and the world comes to listen. We gathered <b>every shiur</b>, every niggun, every page he has given — into <b>one home, in English</b> — so his Torah can reach you, <b>wherever you are</b>.</p>
+    </div>
+  </section>
+
+  <!-- ===== MOMENTS MARQUEE ===== -->
+  <section class="moments" aria-label="Moments from the shiurim">
+    <div class="mq" id="mq1"></div>
+    <div class="mq mq-rev" id="mq2"></div>
   </section>
 
   <!-- ===== STORY ===== -->
@@ -120,7 +150,7 @@ const nav = [
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">The Library · every shiur, in one place</p>
-        <h2>The Torah of the Yanuka</h2>
+        <h2>The Torah <span class="au">of the Yanuka</span></h2>
         <p class="sec-sub">All <b>{nf(counts.library)}</b> videos we found across every channel — searchable, watchable, downloadable in audio or video.</p>
       </div>
 
@@ -176,7 +206,7 @@ const nav = [
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">Niggunim · melodies of the soul</p>
-        <h2>Niggunei HaYanuka</h2>
+        <h2>Niggunei <span class="au">HaYanuka</span></h2>
         <p class="sec-sub">The melodies he plays and composes — for the heart, for the road, for the quiet hour.</p>
       </div>
       <div class="nig-grid">
@@ -196,7 +226,7 @@ const nav = [
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">Weekly Writings · {ALON_SERIES_EN}</p>
-        <h2>The Weekly Alonim</h2>
+        <h2>The Weekly <span class="au">Alonim</span></h2>
         <p class="sec-sub"><b>{counts.alonim}</b> weekly Torah sheets from the Rav's table — free to read and download.</p>
       </div>
       <div class="alon-controls">
@@ -212,7 +242,7 @@ const nav = [
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">Tefillos &amp; Segulos</p>
-        <h2>Prayers Composed by the Yanuka</h2>
+        <h2>Prayers <span class="au">Composed by the Yanuka</span></h2>
         <p class="sec-sub">Tefillos and segulos he composed — for healing, parnassah, a zivug, children, and more.</p>
       </div>
       <div class="tef-grid">
@@ -232,7 +262,7 @@ const nav = [
     <div class="wrap getapp-in">
       <div class="getapp-txt reveal">
         <p class="eyebrow">The App · take the whole hub with you</p>
-        <h2>Install the Yanuka app</h2>
+        <h2>Install the <span class="au">Yanuka app</span></h2>
         <p class="sec-sub">Put all {new Intl.NumberFormat("en-US").format(counts.library)} shiurim, the niggunim and the weekly writings on your home screen — one tap, works offline, no App Store needed.</p>
         <div class="getapp-cta">
           <button id="installBtn" class="btn btn-gold" hidden>⬇︎ Install the App</button>
@@ -245,7 +275,7 @@ const nav = [
       <div class="getapp-phone reveal" aria-hidden="true">
         <div class="phone">
           <div class="phone-scr">
-            <div class="phone-top"><span class="phone-mark">ה</span><b>The Yanuka</b></div>
+            <div class="phone-top"><img class="phone-mark" src="/favicon.svg" alt="" width="26" height="26" /><b>The Yanuka</b></div>
             <div class="phone-hero"><span>▸</span></div>
             <div class="phone-rows"><i></i><i></i><i></i><i></i></div>
           </div>
@@ -259,7 +289,7 @@ const nav = [
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">Follow &amp; Subscribe</p>
-        <h2>Stay connected to the Yanuka</h2>
+        <h2>Stay connected <span class="au">to the Yanuka</span></h2>
         <p class="sec-sub">Every channel and group, in one place. Subscribe, follow, and support the mosdos.</p>
       </div>
       <div class="soc-grid">
@@ -273,11 +303,24 @@ const nav = [
     </div>
   </section>
 
+  <!-- ===== CTA BAND ===== -->
+  <section class="ctaband">
+    <div class="wrap ctaband-in reveal">
+      <p class="cb-eyebrow">Take it with you</p>
+      <h2>His Torah — with you, everywhere.</h2>
+      <p class="cb-sub">Install the app, join the group, and the shiurim travel with you — offline, forever.</p>
+      <div class="cb-cta">
+        <a class="btn btn-dark" href="#app">⬇︎ Install the app</a>
+        <a class="btn btn-dark" href={waEn} target="_blank" rel="noopener">💬 Join the WhatsApp group</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="site-foot">
     <div class="wrap foot-in">
       <div>
-        <div class="brand"><span class="brand-mark">ה</span><span class="brand-txt"><b>hayanuka.life</b><small>the Torah of the Yanuka, in English</small></span></div>
+        <div class="brand"><img class="brand-mark" src="/favicon.svg" alt="" width="38" height="38" /><span class="brand-txt"><b>hayanuka.life</b><small>the Torah of the Yanuka, in English</small></span></div>
         <p class="foot-note">An English home for the Torah, niggunim and tefillos of HaGaon Rav Shlomo Yehuda Beeri shlit”a. All content belongs to the Yanuka and his mosdos, brought here with love and with links back to the official channels.</p>
       </div>
       <div class="foot-links">

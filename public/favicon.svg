@@ -1,1 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0d99a"/><stop offset="1" stop-color="#a3823f"/></linearGradient></defs><rect width="48" height="48" rx="12" fill="#0a0e1a"/><text x="24" y="34" font-family="Georgia,serif" font-size="30" font-weight="700" fill="url(#g)" text-anchor="middle">ה</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="44%" r="62%">
+      <stop offset="0%" stop-color="#d8b976" stop-opacity=".30"/>
+      <stop offset="100%" stop-color="#d8b976" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6e7b8"/>
+      <stop offset="55%" stop-color="#d8b976"/>
+      <stop offset="100%" stop-color="#a97c2f"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e1"/>
+      <stop offset="100%" stop-color="#edcf85"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0a0e1a"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+  <!-- flame -->
+  <path d="M262 84
+           c 6 58 54 96 78 148
+           c 14 30 20 54 20 78
+           a 104 104 0 0 1 -208 0
+           c 0 -52 30 -92 56 -128
+           c 6 22 18 36 18 36
+           s 24 -68 36 -134 z" fill="url(#fl)"/>
+  <path d="M256 236
+           c 24 36 44 58 44 90
+           a 44 44 0 0 1 -88 0
+           c 0 -32 20 -54 44 -90 z" fill="url(#core)"/>
+  <!-- lamp base -->
+  <path d="M186 434 h140 a10 10 0 0 1 0 20 h-140 a10 10 0 0 1 0 -20 z" fill="#d8b976" opacity=".85"/>
+</svg>

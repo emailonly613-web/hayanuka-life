@@ -79,8 +79,12 @@ const ld = {
         if(cur) document.documentElement.setAttribute("data-theme",cur); else document.documentElement.removeAttribute("data-theme");
         try{ localStorage.setItem("hy-theme", cur); }catch(e){}
       };
-      // PWA service worker
-      if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(()=>{}));
+      // PWA service worker — reload once when a NEW version takes over (self-heals stale phones)
+      if ("serviceWorker" in navigator) {
+        const hadCtrl = !!navigator.serviceWorker.controller;
+        navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadCtrl && !window.__hyReloaded) { window.__hyReloaded = 1; location.reload(); } });
+        window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).catch(()=>{}));
+      }
     </script>
   </body>
 </html>

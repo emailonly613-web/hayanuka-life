@@ -113,12 +113,91 @@
   function aapply() { const q = $("#alonSearch").value.trim().toLowerCase(); av = AL.filter((a) => !q || (a.en + " " + a.he).toLowerCase().includes(q)); $("#alonGrid").innerHTML = ""; as = 0; amore(); }
   function initAlon() { fetch("/data/alonim.json").then((r) => r.json()).then((d) => { AL = d; aapply(); }); let t; $("#alonSearch").addEventListener("input", () => { clearTimeout(t); t = setTimeout(aapply, 160); }); $("#alonMore").addEventListener("click", amore); }
 
+  // ---- moments marquee: two auto-scrolling rows of real thumbnails (click to play)
+  function buildMarquee() {
+    const rows = [$("#mq1"), $("#mq2")]; if (!rows[0]) return;
+    const ids = Object.keys(MEDIA).filter((id) => MEDIA[id].includes("t"));
+    if (ids.length < 8) return;
+    const titles = {}; for (const v of LIB) titles[v[0]] = v[1];
+    const pick = ids.slice(0, 36);
+    rows.forEach((row, r) => {
+      if (!row) return;
+      const set = pick.filter((_, i) => i % 2 === r);
+      const item = (id) => `<button class="mq-it" data-watch="${id}" data-title="${esc(titles[id] || "")}" aria-label="Play"><img src="${turl(id)}" alt="" loading="lazy" onerror="this.parentNode.remove()"></button>`;
+      row.innerHTML = set.map(item).join("") + set.map(item).join(""); // duplicated for the seamless loop
+    });
+  }
+
   // ---- boot: pull the live media manifest from our CDN, then render
   fetch(`${CDN}/media-manifest.json`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : {}).then((m) => { MEDIA = m || {}; }).catch(() => {}).finally(() => {
     counters(); initLib(); initAlon(); paintThumbs();
     const n = Object.keys(MEDIA).length;
     if (n) { const b = $("#readyCount"); if (b) b.textContent = n.toLocaleString("en-US"); }
+    // marquee needs LIB titles — build once the library json lands (initLib fetch), retry briefly
+    let tries = 0; const t = setInterval(() => { if (LIB.length || ++tries > 20) { clearInterval(t); buildMarquee(); } }, 250);
   });
+})();
+
+/* ---- FX layer: sticky header state, hero parallax, scroll-lit mission text, 3D card tilt ---- */
+(function () {
+  "use strict";
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // header scrolled state
+  const head = document.querySelector(".site-head");
+  let ticking = false;
+  function onScroll() {
+    if (head) head.classList.toggle("scrolled", scrollY > 40);
+    if (!reduced) {
+      const hi = document.getElementById("heroIn"), hv = document.getElementById("heroVeil");
+      if (hi && scrollY < innerHeight * 1.2) { hi.style.transform = `translateY(${scrollY * 0.16}px)`; hi.style.opacity = String(Math.max(0, 1 - scrollY / (innerHeight * 0.9))); }
+      if (hv && scrollY < innerHeight * 1.2) hv.style.opacity = String(1 + scrollY / innerHeight * 0.4);
+    }
+    hlPaint();
+    ticking = false;
+  }
+  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+
+  // scroll-lit mission text: split words (keeping <b> emphasis), light them up with scroll progress
+  const hlEl = document.getElementById("hlText");
+  let hlSpans = [];
+  if (hlEl) {
+    const frag = document.createDocumentFragment();
+    for (const node of [...hlEl.childNodes]) {
+      const gold = node.nodeName === "B";
+      const text = node.textContent;
+      for (const w of text.split(/\s+/)) {
+        if (!w) continue;
+        const s = document.createElement("span"); s.className = "w" + (gold ? " g" : ""); s.textContent = w;
+        frag.appendChild(s); frag.appendChild(document.createTextNode(" "));
+      }
+    }
+    hlEl.textContent = ""; hlEl.appendChild(frag);
+    hlSpans = [...hlEl.querySelectorAll(".w")];
+  }
+  function hlPaint() {
+    if (!hlSpans.length || reduced) return;
+    const r = hlEl.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (innerHeight * 0.82 - r.top) / (innerHeight * 0.55)));
+    const n = Math.round(p * hlSpans.length);
+    for (let i = 0; i < hlSpans.length; i++) hlSpans[i].classList.toggle("lit", i < n);
+  }
+
+  // 3D tilt on cards (desktop pointers only)
+  if (!reduced && matchMedia("(hover:hover) and (pointer:fine)").matches) {
+    document.addEventListener("mousemove", (e) => {
+      const c = e.target.closest(".vcard, .promise-card, .soc, .tef");
+      document.querySelectorAll(".tilting").forEach((el) => { if (el !== c) { el.classList.remove("tilting"); el.style.transform = ""; } });
+      if (!c) return;
+      const r = c.getBoundingClientRect();
+      const rx = ((e.clientY - r.top) / r.height - 0.5) * -5, ry = ((e.clientX - r.left) / r.width - 0.5) * 5;
+      c.classList.add("tilting");
+      c.style.transform = `perspective(700px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-4px)`;
+    }, { passive: true });
+    document.addEventListener("mouseleave", () => document.querySelectorAll(".tilting").forEach((el) => { el.classList.remove("tilting"); el.style.transform = ""; }), true);
+  }
+
+  onScroll();
 })();
 
 /* ---- Tefillos swipe viewer ---- */
