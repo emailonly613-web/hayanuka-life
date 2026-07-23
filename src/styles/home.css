@@ -111,22 +111,6 @@
 
 .tilting { transition: transform .09s linear !important; will-change: transform; }
 
-/* ===== MOBILE: wider not taller ===== */
-@media (max-width: 680px) {
-  .torah, .niggunim, .alonim, .tefillos, .follow, .story, .mission { padding-top: 56px; padding-bottom: 56px; }
-  .sec-head { margin-bottom: 28px; }
-  .lib-grid, .alon-grid, .nig-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .tef-grid, .soc-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .tef { flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px; }
-  .tef b { font-size: .9rem; } .tef small { font-size: .74rem; }
-  .soc { flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 16px; }
-  .li-t { font-size: .78rem; } .li-acts .chip { font-size: .66rem; padding: .32em .6em; }
-  .row-scroll { grid-auto-columns: 246px; }
-  .alon { padding: 12px; } .alon b { font-size: .9rem; }
-  .nig-meta b { font-size: .85rem; } .nig-meta { padding: 10px; }
-  .moments { padding-bottom: 56px; }
-  .mq-it { width: 168px; }
-}
 /* library cards ease in as they render */
 .li { animation: liIn .5s ease both; }
 @keyframes liIn { from { opacity: 0; transform: translateY(18px); } }
@@ -401,3 +385,20 @@ body.has-bar { padding-bottom: 92px; }
 .hd-pl-h b { font-size: 1rem; } .hd-pl-h span { color: var(--ink-soft); font-size: .8rem; margin-inline-end: auto; }
 .hd-play-pl { background: none; border: 1px solid var(--gold); color: var(--gold-bright); border-radius: 999px; padding: .3em .8em; font-size: .78rem; font-weight: 700; cursor: pointer; }
 .hd-foot { padding: 14px 16px; border-top: 1px solid var(--line); }
+
+/* ===== MOBILE: wider not taller (kept LAST so it wins the cascade) ===== */
+@media (max-width: 680px) {
+  .torah, .niggunim, .alonim, .tefillos, .follow, .story, .mission { padding-top: 56px; padding-bottom: 56px; }
+  .sec-head { margin-bottom: 28px; }
+  .lib-grid, .alon-grid, .nig-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .tef-grid, .soc-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .tef { flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px; }
+  .tef b { font-size: .9rem; } .tef small { font-size: .74rem; }
+  .soc { flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 16px; }
+  .li-t { font-size: .78rem; } .li-acts .chip { font-size: .66rem; padding: .32em .6em; }
+  .row-scroll { grid-auto-columns: 246px; }
+  .alon { padding: 12px; } .alon b { font-size: .9rem; }
+  .nig-meta b { font-size: .85rem; } .nig-meta { padding: 10px; }
+  .moments { padding-bottom: 56px; }
+  .mq-it { width: 168px; }
+}
