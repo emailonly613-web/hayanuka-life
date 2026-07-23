@@ -104,7 +104,7 @@ export const STORY_EN = {
   title: "About the Yanuka",
   name: "Rav Shlomo Yehuda Beeri",
   epigraph:
-    "A young man who knows the whole Torah, sitting and teaching — and people of every kind come to listen.",
+    "He sits and teaches, with the whole Torah open before him — and people of every kind come to listen.",
   sections: [
     {
       heading: "Why he's called “the Yanuka”",
