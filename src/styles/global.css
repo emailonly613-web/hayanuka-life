@@ -37,6 +37,9 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.08
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+/* WIDE-DESKTOP FILL (owner 2026-07-24): at 100% on a wide monitor the content uses
+   the screen — no dead margins. Reading-width elements keep their own caps. */
+@media (min-width: 1360px) { :root { --maxw: min(1720px, calc(100vw - 96px)); } }
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); font-weight: 700;
   padding: .5em 1.3em; border: 1px solid color-mix(in srgb, var(--gold) 38%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--gold) 8%, transparent); }
 .eyebrow::before, .eyebrow::after { content: "•"; font-size: .8em; opacity: .8; }
