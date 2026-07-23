@@ -56,9 +56,12 @@ const TICKER = [
     </div>
   </div>
 
+  <!-- ===== TIMELY BANNER (populated from the CDN when there's a moment to hold) ===== -->
+  <div id="timelyBanner" class="timely" hidden></div>
+
   <!-- ===== MOBILE SECTION NAV (phones only — the way around the long scroll) ===== -->
   <nav class="mnav" id="mnav" aria-label="Jump to section">
-    {[["#torah","📖","Torah"],["#niggunim","🎵","Niggunim"],["#alonim","📜","Weekly"],["#tefillos","🕯","Tefillos"],["#story","✦","Story"],["#app","📲","App"],["#follow","💬","Follow"]].map(([h, ic, l]) => (
+    {[["#recent","✨","New"],["#torah","📖","Torah"],["#niggunim","🎵","Niggunim"],["#alonim","📜","Weekly"],["#tefillos","🕯","Tefillos"],["#story","✦","Story"],["#app","📲","App"],["#follow","💬","Follow"]].map(([h, ic, l]) => (
       <a href={h}><i>{ic}</i>{l}</a>
     ))}
   </nav>
@@ -120,6 +123,18 @@ const TICKER = [
   <section class="moments" aria-label="Moments from the shiurim">
     <div class="mq" id="mq1"></div>
     <div class="mq mq-rev" id="mq2"></div>
+  </section>
+
+  <!-- ===== RECENTLY ADDED (fed live from the CDN by the 12-hour sweep) ===== -->
+  <section class="recent" id="recent">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Fresh · swept in twice a day, automatically</p>
+        <h2>Recently <span class="au">Added</span></h2>
+        <p class="sec-sub">The newest shiurim from every channel — found, saved, and filed here the moment they appear.</p>
+      </div>
+      <div id="recentGrid" class="lib-grid"></div>
+    </div>
   </section>
 
   <!-- ===== STORY ===== -->

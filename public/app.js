@@ -66,10 +66,27 @@
     toast((fmt === "audio" ? "🎧 Audio" : "🎬 Video") + " downloading — it's yours to keep, offline.");
   }
 
+  // ---- context queue: play from where you tapped — the whole row/grid becomes the swipe feed
+  function ctxPlay(btn, kind) {
+    const id = btn.dataset.watch || btn.dataset.listen, title = btn.dataset.title;
+    if (!window.HY) return kind === "video" ? openVideo(id, title) : openAudio(id, title);
+    const scope = btn.closest(".row-scroll, .lib-grid, .nig-grid, .mq, #recentGrid");
+    if (scope) {
+      const seen = new Set(); const q = []; let start = 0;
+      for (const b of scope.querySelectorAll("[data-watch]")) {
+        const bid = b.dataset.watch; if (!bid || seen.has(bid)) continue; seen.add(bid);
+        if (bid === id) start = q.length;
+        q.push({ id: bid, title: b.dataset.title, kind });
+      }
+      if (q.length > 1) return window.HY.playQueue(q, start, kind);
+    }
+    window.HY.play(id, title, kind);
+  }
+
   // ---- delegated clicks
   document.addEventListener("click", (e) => {
-    const w = e.target.closest("[data-watch]"); if (w) { openVideo(w.dataset.watch, w.dataset.title); return; }
-    const l = e.target.closest("[data-listen]"); if (l) { openAudio(l.dataset.listen, l.dataset.title); return; }
+    const w = e.target.closest("[data-watch]"); if (w) { ctxPlay(w, "video"); return; }
+    const l = e.target.closest("[data-listen]"); if (l) { ctxPlay(l, "audio"); return; }
     const dl = e.target.closest("[data-dl]"); if (dl) { e.preventDefault(); download(dl.dataset.dl, dl.dataset.fmt, dl.dataset.title); return; }
     const b = e.target.closest(".dl-btn"); if (b) { const x = b.closest(".dl"); $$(".dl.open").forEach((o) => o !== x && o.classList.remove("open")); x.classList.toggle("open"); return; }
     const sv = e.target.closest("[data-save]"); if (sv && window.HY) { e.preventDefault(); window.HY.toggleSave(sv.dataset.save, sv.dataset.title); return; }
@@ -143,6 +160,23 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !sheet.hidden) close(); });
   })();
 
+  // ---- recently added + timely banner (both live from the CDN — zero deploys needed)
+  function initRecent() {
+    fetch(`${CDN}/recent.json`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).then((d) => {
+      const g = $("#recentGrid"); if (!g || !d || !d.items) return;
+      const items = d.items.filter((x) => MEDIA[x.id]).slice(0, 18);
+      g.innerHTML = items.map((x) => card([x.id, x.title, x.channel]).replace('<article class="li">', `<article class="li"><span class="rec-badge">NEW</span>`));
+      paintThumbs(g);
+    }).catch(() => {});
+    fetch(`${CDN}/timely.json`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).then((t) => {
+      const b = $("#timelyBanner"); if (!b || !t || !t.active) return;
+      if (t.until && Date.now() > Date.parse(t.until)) return; // the day passed — filed away
+      b.innerHTML = `<div class="wrap tb-in"><span class="tb-ic">🕯</span><div class="tb-t"><b>${esc(t.title)}</b><small>${esc(t.sub || "")}</small></div><button class="btn btn-gold sm" id="tbGo">▸ Watch now</button></div>`;
+      b.hidden = false;
+      $("#tbGo").onclick = () => { const q = (t.ids || []).filter((id) => MEDIA[id]).map((id) => ({ id, title: (t.titles || {})[id] || "" })); if (q.length && window.HY) window.HY.playQueue(q, 0, "video"); else toast("Uploading now — minutes away."); };
+    }).catch(() => {});
+  }
+
   // ---- moments marquee: two auto-scrolling rows of real thumbnails (click to play)
   function buildMarquee() {
     const rows = [$("#mq1"), $("#mq2")]; if (!rows[0]) return;
@@ -165,6 +199,13 @@
     if (n) { const b = $("#readyCount"); if (b) b.textContent = n.toLocaleString("en-US"); }
     // marquee needs LIB titles — build once the library json lands (initLib fetch), retry briefly
     let tries = 0; const t = setInterval(() => { if (LIB.length || ++tries > 20) { clearInterval(t); buildMarquee();
+      // theater browse data: subject chips + full search index
+      fetch("/data/curated.json").then((r) => r.json()).catch(() => []).then((cur) => {
+        const cats = {}; for (const v of cur || []) (cats[v.category] ||= []).push({ id: v.id, title: v.he || v.en });
+        const all = LIB.map((v) => ({ id: v[0], title: v[1] }));
+        if (window.HY) window.HY.registerBrowse({ cats: [{ name: "Everything", items: all }, ...Object.entries(cats).map(([name, items]) => ({ name, items }))], all });
+      });
+      initRecent();
       // ?play=<id> deep link (from the per-shiur SEO pages)
       const pid = new URLSearchParams(location.search).get("play");
       if (pid && window.HY) { const row = LIB.find((v) => v[0] === pid); window.HY.play(pid, row ? row[1] : pid); }
