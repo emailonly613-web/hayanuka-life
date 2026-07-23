@@ -67,8 +67,9 @@
       <div class="th-spin" id="th-spin" hidden></div>
     </div>
     <div class="th-foot">
-      <div class="th-info"><b id="th-title"></b><small id="th-sub"></small></div>
+      <div class="th-info" id="th-more" role="link" title="Open this shiur's full page"><b id="th-title"></b><small id="th-sub"></small><span class="th-morehint">tap for details, transcript &amp; downloads →</span></div>
       <div class="th-rail">
+        <button id="th-detail" title="Full page — details &amp; transcript">ⓘ</button>
         <button id="th-save" title="Save">♡</button>
         <button id="th-mode" title="Audio / Video">🎧</button>
         <a id="th-dl" title="Download" download>⬇︎</a>
@@ -257,6 +258,10 @@
   bar.querySelector("#hb-save").onclick = () => toggleSave(cur);
   th.querySelector("#th-save").onclick = () => toggleSave(cur);
   th.querySelector("#th-addpl").onclick = () => addToPlaylist(cur, titleOf(cur));
+  // dive into the full page for THIS video (title tap or ⓘ) — pauses here, opens details/transcript
+  const toDetails = () => { if (!cur) return; try { active.pause(); } catch {} location.href = `/shiur/${cur}/`; };
+  th.querySelector("#th-more").onclick = toDetails;
+  th.querySelector("#th-detail").onclick = toDetails;
   function updSave() { const on = LIB.saved.includes(cur); bar.querySelector("#hb-save").textContent = on ? "♥" : "♡"; const t = th.querySelector("#th-save"); t.textContent = on ? "♥" : "♡"; t.classList.toggle("on", on); }
 
   // ---- media session (lock screen / earbuds)

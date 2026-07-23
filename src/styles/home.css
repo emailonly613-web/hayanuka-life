@@ -437,9 +437,11 @@ body.th-open { overflow: hidden; overscroll-behavior: none; }
 .th-spin { position: absolute; width: 46px; height: 46px; border-radius: 50%; border: 3px solid rgba(216,185,118,.25); border-top-color: var(--gold-bright); animation: spin 1s linear infinite; z-index: 2; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .th-foot { position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; display: flex; align-items: flex-end; gap: 14px; padding: 16px 14px calc(18px + env(safe-area-inset-bottom)); background: linear-gradient(0deg, rgba(4,6,12,.9), transparent); }
-.th-info { flex: 1; min-width: 0; }
+.th-info { flex: 1; min-width: 0; cursor: pointer; }
 .th-info b { display: block; font-size: 1.02rem; line-height: 1.35; color: #fff; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.th-info:hover b { color: var(--gold-bright); }
 .th-info small { color: var(--gold-bright); font-size: .78rem; }
+.th-morehint { display: block; margin-top: 3px; font-size: .68rem; color: rgba(232,228,218,.55); letter-spacing: .04em; }
 .th-rail { display: flex; flex-direction: column; gap: 10px; }
 .th-rail button, .th-rail a { width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(216,185,118,.35); background: rgba(4,6,12,.55); color: var(--ink); font-size: 1.15rem; cursor: pointer; display: grid; place-items: center; backdrop-filter: blur(8px); text-decoration: none; }
 .th-rail button:hover, .th-rail a:hover { border-color: var(--gold); color: var(--gold-bright); }
