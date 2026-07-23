@@ -86,7 +86,19 @@ const nav = [
   <section class="story" id="story">
     <div class="wrap story-in">
       <div class="story-media reveal">
-        <img src="/img/1000638653.jpg" alt="Sefer of the Yanuka" loading="lazy" />
+        <div class="tviewer" id="tviewer" data-src="/data/tefillot-latest.json">
+          <div class="tv-head"><span class="eyebrow">His Tefillos</span><b>The latest collection — swipe through, download, or print</b></div>
+          <div class="tv-stage">
+            <button class="tv-nav tv-prev" aria-label="Previous page">‹</button>
+            <div class="tv-track" id="tvTrack"></div>
+            <button class="tv-nav tv-next" aria-label="Next page">›</button>
+          </div>
+          <div class="tv-foot">
+            <span class="tv-count" id="tvCount">—</span>
+            <a class="btn btn-gold sm" id="tvDownload" href="#" download>⬇︎ Download</a>
+            <button class="btn btn-ghost sm" id="tvPrint">🖨 Print</button>
+          </div>
+        </div>
         <div class="story-badge">{STORY_EN.name}</div>
       </div>
       <div class="story-txt">

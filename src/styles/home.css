@@ -198,3 +198,17 @@
 .pbtn { display: inline-flex; align-items: center; gap: .4em; padding: .5em 1.1em; border-radius: 999px; background: linear-gradient(135deg, var(--gold-bright), var(--gold)); color: #23180a; font-weight: 700; font-size: .85rem; }
 .pbtn:hover { transform: translateY(-1px); }
 @media (max-width: 700px){ .player-bar { position: static; margin-top: 14px; } }
+
+/* ===== TEFILLOT SWIPE VIEWER ===== */
+.tviewer { position: sticky; top: 90px; background: linear-gradient(160deg, var(--panel), var(--panel-2)); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.tv-head { padding: 16px 18px 10px; }
+.tv-head b { display: block; font-family: var(--font-display); font-size: 1.15rem; color: var(--ink); margin-top: 4px; }
+.tv-stage { position: relative; display: flex; align-items: center; background: #0b0f1a; }
+.tv-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; width: 100%; aspect-ratio: 3 / 4; scrollbar-width: none; }
+.tv-track::-webkit-scrollbar { display: none; }
+.tv-track img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; scroll-snap-align: center; background: #fff; }
+.tv-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: color-mix(in srgb, var(--ground) 75%, transparent); color: var(--gold-bright); font-size: 1.4rem; cursor: pointer; display: grid; place-items: center; backdrop-filter: blur(6px); }
+.tv-prev { left: 10px; } .tv-next { right: 10px; }
+.tv-nav:hover { border-color: var(--gold); color: var(--gold); }
+.tv-foot { display: flex; align-items: center; gap: 10px; padding: 12px 16px; }
+.tv-count { font-size: .85rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; margin-inline-end: auto; }

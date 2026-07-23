@@ -101,49 +101,41 @@ export const YEARS_EN = {
 
 // The Rav's story — hand-adapted into English from the official Hebrew biography.
 export const STORY_EN = {
-  title: "The Yanuka",
-  name: "HaGaon Rav Shlomo Yehuda Beeri shlit”a",
+  title: "About the Yanuka",
+  name: "Rav Shlomo Yehuda Beeri",
   epigraph:
-    "“A sight unseen for generations — a young man fluent in the entire Torah. Elders and the geonim of the land sit before him to hear his words, and all rejoice in him like one who has found a great treasure.”",
+    "A young man who knows the whole Torah, sitting and teaching — and people of every kind come to listen.",
   sections: [
     {
-      heading: "Why “the Yanuka”",
+      heading: "Why he's called “the Yanuka”",
       paragraphs: [
-        "Because of the rare scope of his Torah knowledge — rarer still for his age — he has been known from his youth as “the Yanuka,” a title drawn from the holy Zohar for a prodigy whose brilliance is revealed while still a child.",
-        "His shiurim have become renowned. Thousands stream to them from every part of the Jewish world — among them accomplished talmidei chachamim and elders who consider him their teacher. Gedolei Yisrael have themselves come to hear him, and some have said that a neshamah like this descends to the world once in many generations.",
+        "From a young age he knew an unusual amount of Torah, so people began calling him “the Yanuka” — a word from the Zohar for a young person with rare knowledge. The name stuck.",
+        "Today many people come to his shiurim, from all kinds of backgrounds. Some are simple Jews looking to grow; some are serious scholars. They come to learn and to be lifted.",
       ],
     },
     {
-      heading: "The Shiurim",
+      heading: "His shiurim",
       paragraphs: [
-        "The shiurim are delivered without prior preparation. Most begin from a question raised by someone in the crowd. From there the Yanuka cites hundreds of sources spanning the entire Torah library — the sages of every era and every stream — and, in a breathtaking arc, weaves their words into a single path and approach.",
-        "Those who have truly listened understand: these are not merely “classes.” They are a living derech of Torah — a crown restored, a lifeline in a stormy sea, pure waters that cleanse the heart toward closeness to Hashem, yirah, ahavah, and the keeping of Torah.",
+        "He usually speaks without notes. A shiur often starts from a question someone asks, and from there he brings sources from all over the Torah and ties them together into one clear idea.",
+        "People say the shiurim changed how they think and how they daven. That's really the goal here — to bring his Torah to more people, in English.",
       ],
     },
     {
-      heading: "The Music",
+      heading: "His music",
       paragraphs: [
-        "The Yanuka is deeply connected to the world of melody. With unusual talent he plays several keyboard instruments, and after shiurim he often sits at the piano playing niggunim of soul and feeling — many of which he composed himself. Well-known musicians sometimes join him.",
+        "He loves music. After a shiur he'll often sit at the piano and play niggunim — some that others wrote, and some of his own. A few of them are on this site.",
       ],
     },
     {
-      heading: "His Way",
+      heading: "One thing he keeps teaching",
       paragraphs: [
-        "In his unique way, the Yanuka unites streams, communities, and circles that rarely sit together. A guiding principle of his learning: at the root, the early sages did not disagree — all of them aimed, in their learning, at the same goal: to serve the G-d of heaven and earth and bring Him nachas ruach. From complete love and desire to do His will precisely, they arrived at different paths and conclusions in His service.",
-        "Among his many students you see every shade of the Jewish people learning in a togetherness and love that has hardly been seen. He constantly teaches, and proves from the sources, that the way of the Creator is to honor every creature formed in His image — and to love every single one.",
+        "A theme that comes up again and again: love every Jew, and respect every person. He teaches that people who look very different are closer than they think, and he tries to bring them together.",
       ],
     },
     {
-      heading: "Tefillos and Berachos",
+      heading: "Tefillos",
       paragraphs: [
-        "The Yanuka's tefillos and berachos are famed. Tens of thousands around the world seek his blessing, and many attest to salvation and wonders beyond the way of nature.",
-      ],
-    },
-    {
-      heading: "The Torah Institute",
-      paragraphs: [
-        "The Torah Institute of the Yanuka's beis midrash was founded in 5780 (2020) by a team of rabbanim from his study hall. It has taken upon itself to gather his shiurim, derashos, and writings — a body of Torah that began in 5765 (2005) — an enormous treasury spanning every area of Yiddishkeit, all of Pardes, halachah and hashkafah, awaiting its hour to be published and to light up the world.",
-        "The Institute also runs “De'ah es Hashem” — Torah shiurim delivered across Eretz Yisrael by rabbanim of his beis midrash — and publishes his many composed tefillos for different needs and seasons of the year.",
+        "He has written many tefillos over the years — for parnassah, for a refuah, for a shidduch, for children, and more. You can read and download them here, including his latest collection.",
       ],
     },
   ],

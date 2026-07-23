@@ -69,9 +69,10 @@ const ld = {
   <body>
     <slot />
     <script is:inline>
-      // Scroll reveal
-      const io = new IntersectionObserver((es)=>{ for(const e of es){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} } }, {threshold:.12});
+      // Scroll reveal — robust: reveal a touch early, and a safety net so nothing ever stays hidden
+      const io = new IntersectionObserver((es)=>{ for(const e of es){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} } }, {threshold:.02, rootMargin:"0px 0px 240px 0px"});
       requestAnimationFrame(()=>document.querySelectorAll(".reveal").forEach(el=>io.observe(el)));
+      setTimeout(()=>document.querySelectorAll(".reveal:not(.in)").forEach(el=>el.classList.add("in")), 2200);
       // Theme toggle
       window.toggleTheme = function(){
         const cur = document.documentElement.getAttribute("data-theme")==="light" ? "" : "light";

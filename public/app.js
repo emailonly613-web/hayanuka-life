@@ -113,3 +113,18 @@
     if (n) { const b = $("#readyCount"); if (b) b.textContent = n.toLocaleString("en-US"); }
   });
 })();
+
+/* ---- Tefillos swipe viewer ---- */
+(function () {
+  const v = document.getElementById("tviewer"); if (!v) return;
+  fetch(v.dataset.src).then((r) => r.json()).then((d) => {
+    const track = document.getElementById("tvTrack"), count = document.getElementById("tvCount");
+    for (let i = 1; i <= d.pages; i++) { const im = document.createElement("img"); im.loading = "lazy"; im.alt = "Tefillah page " + i; im.src = `${d.cdn}/page-${String(i).padStart(2, "0")}.jpg`; track.appendChild(im); }
+    const upd = () => { const p = Math.round(track.scrollLeft / track.clientWidth) + 1; count.textContent = `${Math.min(p, d.pages)} / ${d.pages}`; };
+    track.addEventListener("scroll", () => requestAnimationFrame(upd)); upd();
+    v.querySelector(".tv-prev").addEventListener("click", () => track.scrollBy({ left: -track.clientWidth }));
+    v.querySelector(".tv-next").addEventListener("click", () => track.scrollBy({ left: track.clientWidth }));
+    const dl = document.getElementById("tvDownload"); if (dl) dl.href = d.pdf;
+    const pr = document.getElementById("tvPrint"); if (pr) pr.addEventListener("click", () => window.open(d.pdf, "_blank"));
+  }).catch(() => { v.style.display = "none"; });
+})();
