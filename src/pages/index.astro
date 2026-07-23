@@ -32,6 +32,7 @@ const nav = [
         {nav.map(([h, l]) => <a href={h}>{l}</a>)}
       </nav>
       <div class="head-cta">
+        <button class="icon-btn" id="hy-lib-btn" aria-label="My Library" title="My Library">♥<span id="hy-lib-count" class="lib-badge"></span></button>
         <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle light and dark">☾</button>
         <a class="btn btn-gold sm" href="#torah">Explore</a>
       </div>
@@ -140,6 +141,8 @@ const nav = [
                   <div class="vacts">
                     <button class="chip" data-watch={v.id} data-title={v.he}>Watch</button>
                     <button class="chip" data-listen={v.id} data-title={v.he}>Listen</button>
+                    <button class="heart" data-save={v.id} data-title={v.he} title="Save">♡</button>
+                    <button class="chip addpl" data-addpl={v.id} data-title={v.he} title="Add to playlist">＋</button>
                     <div class="dl">
                       <button class="chip dl-btn">↓</button>
                       <div class="dl-menu">
@@ -294,5 +297,6 @@ const nav = [
   <!-- ===== TOAST ===== -->
   <div id="toast" class="toast" hidden></div>
 
+  <script is:inline src="/player.js" defer></script>
   <script is:inline src="/app.js" defer></script>
 </Base>

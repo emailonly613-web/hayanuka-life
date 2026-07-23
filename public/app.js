@@ -28,6 +28,7 @@
   // ---- player modal (self-hosted video OR audio)
   const player = $("#player"), frame = $("#playerFrame");
   function openVideo(id, title) {
+    if (window.HY) return window.HY.play(id, title, "video");
     if (!has(id, "v")) return prep(id, "video");
     frame.innerHTML = `<video controls autoplay playsinline preload="metadata" poster="${has(id,"t")?turl(id):POSTER}" style="width:100%;height:100%;background:#000">`
       + `<source src="${vurl(id)}" type="video/mp4"></video>`
@@ -35,6 +36,7 @@
     show();
   }
   function openAudio(id, title) {
+    if (window.HY) return window.HY.play(id, title, "audio");
     if (!has(id, "a")) return prep(id, "audio");
     frame.innerHTML = `<div class="audio-stage"><img src="${has(id,"t")?turl(id):POSTER}" alt="" onerror="this.src='${POSTER}'"><div class="audio-body"><b>${esc(title || "Shiur")}</b>`
       + `<audio controls autoplay preload="metadata" style="width:100%"><source src="${aurl(id)}" type="audio/mpeg"></audio></div></div>`
@@ -70,6 +72,9 @@
     const l = e.target.closest("[data-listen]"); if (l) { openAudio(l.dataset.listen, l.dataset.title); return; }
     const dl = e.target.closest("[data-dl]"); if (dl) { e.preventDefault(); download(dl.dataset.dl, dl.dataset.fmt, dl.dataset.title); return; }
     const b = e.target.closest(".dl-btn"); if (b) { const x = b.closest(".dl"); $$(".dl.open").forEach((o) => o !== x && o.classList.remove("open")); x.classList.toggle("open"); return; }
+    const sv = e.target.closest("[data-save]"); if (sv && window.HY) { e.preventDefault(); window.HY.toggleSave(sv.dataset.save, sv.dataset.title); return; }
+    const ap = e.target.closest("[data-addpl]"); if (ap && window.HY) { e.preventDefault(); window.HY.addToPlaylist(ap.dataset.addpl, ap.dataset.title); return; }
+    const lb = e.target.closest("#hy-lib-btn"); if (lb && window.HY) { window.HY.openDrawer(); return; }
     $$(".dl.open").forEach((o) => o.classList.remove("open"));
   });
 
@@ -85,6 +90,8 @@
     return `<article class="li"><button class="li-thumb" data-watch="${id}" data-title="${esc(he)}"><img data-thumb="${id}" alt="" loading="lazy"><span class="play">▸</span></button>`
       + `<div class="li-b"><p class="li-t" dir="auto">${esc(he) || "Shiur"}</p><p class="li-c">${esc(chan)}</p>`
       + `<div class="li-acts"><button class="chip" data-watch="${id}" data-title="${esc(he)}">Watch</button><button class="chip" data-listen="${id}" data-title="${esc(he)}">Listen</button>`
+      + `<button class="heart" data-save="${id}" data-title="${esc(he)}" title="Save">♡</button>`
+      + `<button class="chip addpl" data-addpl="${id}" data-title="${esc(he)}" title="Add to playlist">＋</button>`
       + `<div class="dl"><button class="chip dl-btn">↓</button><div class="dl-menu"><a data-dl="${id}" data-fmt="video">🎬 Video</a><a data-dl="${id}" data-fmt="audio">🎧 Audio</a></div></div>`
       + `</div></div></article>`;
   }
