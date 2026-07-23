@@ -162,6 +162,23 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !sheet.hidden) close(); });
   })();
 
+  // ---- Sparks: the shortest-first swipe feed ("shorts", but ours — shortest → longest, preloaded)
+  let DUR = {};
+  fetch("/data/durations.json").then((r) => r.ok ? r.json() : {}).then((d) => { DUR = d || {}; }).catch(() => {});
+  function sparksQueue() {
+    return LIB.filter((v) => has(v[0], "v") && DUR[v[0]] > 8)
+      .sort((a, b) => DUR[a[0]] - DUR[b[0]])
+      .map((v) => ({ id: v[0], title: v[1], kind: "video" }));
+  }
+  function playSparks() {
+    const q = sparksQueue();
+    if (!q.length) return toast("Sparks are still uploading — minutes away.");
+    window.HY && window.HY.playQueue(q, 0, "video");
+  }
+  document.addEventListener("click", (e) => {
+    const s = e.target.closest("[data-sparks]"); if (s) { e.preventDefault(); playSparks(); }
+  });
+
   // ---- recently added + timely banner (both live from the CDN — zero deploys needed)
   function initRecent() {
     fetch(`${CDN}/recent.json`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).then((d) => {
@@ -205,7 +222,7 @@
       fetch("/data/curated.json").then((r) => r.json()).catch(() => []).then((cur) => {
         const cats = {}; for (const v of cur || []) (cats[v.category] ||= []).push({ id: v.id, title: v.he || v.en });
         const all = LIB.map((v) => ({ id: v[0], title: v[1] }));
-        if (window.HY) window.HY.registerBrowse({ cats: [{ name: "Everything", items: all }, ...Object.entries(cats).map(([name, items]) => ({ name, items }))], all });
+        if (window.HY) window.HY.registerBrowse({ cats: [{ name: "Everything", items: all }, ...Object.entries(cats).map(([name, items]) => ({ name, items }))], all, sparks: sparksQueue });
       });
       initRecent();
       // ?play=<id> deep link (from the per-shiur SEO pages)

@@ -103,6 +103,13 @@
     if (!thOpen) { bar.hidden = false; document.body.classList.add("has-bar"); }
     paintNow();
     mediaSession(id);
+    preloadNext();
+  }
+  // real-time swiping: quietly buffer the NEXT video so the step is instant
+  const P = document.createElement("video"); P.preload = "auto"; P.muted = true; P.playsInline = true;
+  function preloadNext() {
+    const n = queue[qi + 1];
+    if (n && has(n.id, "v")) { const u = vurl(n.id); if (P.src !== u) { P.src = u; try { P.load(); } catch {} } }
   }
   function paintNow() {
     for (const [t, s] of [["#hb-title", "#hb-sub"], ["#th-title", "#th-sub"]]) {
@@ -181,10 +188,12 @@
   function renderChips() {
     const box = th.querySelector("#th-chips"); if (!BROWSE.cats.length || box.dataset.done) return;
     box.dataset.done = 1;
-    box.innerHTML = BROWSE.cats.map((c, i) => `<button class="th-chip" data-ci="${i}">${esc(c.name)}</button>`).join("");
+    box.innerHTML = (BROWSE.sparks ? `<button class="th-chip th-chip-sparks" data-sp="1">✦ Sparks</button>` : "")
+      + BROWSE.cats.map((c, i) => `<button class="th-chip" data-ci="${i}">${esc(c.name)}</button>`).join("");
     box.addEventListener("click", (e) => {
       const b = e.target.closest(".th-chip"); if (!b) return;
       box.querySelectorAll(".th-chip").forEach((x) => x.classList.toggle("on", x === b));
+      if (b.dataset.sp) { const q = BROWSE.sparks(); if (q.length) playQueue(q, 0, "video"); return; }
       const cat = BROWSE.cats[+b.dataset.ci];
       playQueue(cat.items.filter((x) => MEDIA[x.id]), 0, "video");
     });

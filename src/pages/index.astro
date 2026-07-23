@@ -61,7 +61,7 @@ const TICKER = [
 
   <!-- ===== MOBILE SECTION NAV (phones only — the way around the long scroll) ===== -->
   <nav class="mnav" id="mnav" aria-label="Jump to section">
-    {[["#recent","✨","New"],["#torah","📖","Torah"],["#niggunim","🎵","Niggunim"],["#alonim","📜","Weekly"],["#tefillos","🕯","Tefillos"],["#story","✦","Story"],["#app","📲","App"],["#follow","💬","Follow"]].map(([h, ic, l]) => (
+    {[["#sparks","✦","Sparks"],["#recent","✨","New"],["#torah","📖","Torah"],["#niggunim","🎵","Niggunim"],["#alonim","📜","Weekly"],["#tefillos","🕯","Tefillos"],["#story","✦","Story"],["#app","📲","App"],["#follow","💬","Follow"]].map(([h, ic, l]) => (
       <a href={h}><i>{ic}</i>{l}</a>
     ))}
   </nav>
@@ -78,6 +78,7 @@ const TICKER = [
       <p class="hero-quote reveal">{STORY_EN.epigraph}</p>
       <div class="hero-cta reveal">
         <a class="btn btn-gold" href="#torah">▸ Watch the Shiurim</a>
+        <button class="btn btn-spark" data-sparks title="Short clips, shortest first — swipe through">✦ Sparks</button>
         <a class="btn btn-ghost" href="#follow">Follow &amp; Subscribe</a>
       </div>
       <div class="hero-stats reveal">
