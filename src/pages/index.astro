@@ -275,8 +275,8 @@ const TICKER = [
         <p class="sec-sub">Put all {new Intl.NumberFormat("en-US").format(counts.library)} shiurim, the niggunim and the weekly writings on your home screen — one tap, works offline, no App Store needed.</p>
         <div class="getapp-cta">
           <button id="installBtn" class="btn btn-gold" hidden>⬇︎ Install the App</button>
-          <a id="apkBtn" class="btn btn-gold" href="/app/hayanuka.apk" download hidden>🤖 Download for Android (APK)</a>
-          <button id="iosBtn" class="btn btn-ghost">🍎 Add on iPhone</button>
+          <a id="apkBtn" class="btn btn-gold" href="/app/hayanuka.apk" download hidden>Download for Android (APK)</a>
+          <button id="iosBtn" class="btn btn-gold">Add to iPhone / iPad</button>
           <a class="btn btn-ghost" href="#torah">Open in browser</a>
         </div>
         <p id="installHint" class="getapp-hint"></p>
@@ -348,6 +348,21 @@ const TICKER = [
 
   <!-- ===== TOAST ===== -->
   <div id="toast" class="toast" hidden></div>
+
+  <!-- ===== ADD-TO-PHONE SHEET ===== -->
+  <div id="iosSheet" class="iosheet" hidden>
+    <div class="is-card">
+      <button class="is-close" id="iosClose" aria-label="Close">✕</button>
+      <img src="/favicon.svg" alt="" width="56" height="56" />
+      <b>Put the Yanuka on your Home Screen</b>
+      <ol>
+        <li><span class="is-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><rect x="4" y="11" width="16" height="10" rx="2" fill="none"/></svg></span>In <b>Safari</b>, tap the <b>Share</b> button</li>
+        <li><span class="is-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="4" fill="none"/><path d="M12 8.5v7M8.5 12h7"/></svg></span>Scroll down, choose <b>Add to Home Screen</b></li>
+        <li><span class="is-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>Tap <b>Add</b> — it opens full-screen and works offline</li>
+      </ol>
+      <p id="iosNote" class="is-note"></p>
+    </div>
+  </div>
 
   <script is:inline src="/player.js" defer></script>
   <script is:inline src="/app.js" defer></script>

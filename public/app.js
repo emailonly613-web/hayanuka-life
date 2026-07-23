@@ -113,6 +113,36 @@
   function aapply() { const q = $("#alonSearch").value.trim().toLowerCase(); av = AL.filter((a) => !q || (a.en + " " + a.he).toLowerCase().includes(q)); $("#alonGrid").innerHTML = ""; as = 0; amore(); }
   function initAlon() { fetch("/data/alonim.json").then((r) => r.json()).then((d) => { AL = d; aapply(); }); let t; $("#alonSearch").addEventListener("input", () => { clearTimeout(t); t = setTimeout(aapply, 160); }); $("#alonMore").addEventListener("click", amore); }
 
+  // ---- install: real PWA prompt (Android/desktop) + guided sheet (iOS)
+  let defPrompt = null;
+  addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault(); defPrompt = e;
+    const b = $("#installBtn"); if (b) { b.hidden = false; b.onclick = async () => { defPrompt.prompt(); const c = await defPrompt.userChoice; toast(c.outcome === "accepted" ? "Installing — check your home screen ✓" : "Anytime — it's here whenever you want it."); }; }
+  });
+  addEventListener("appinstalled", () => toast("Installed ✓ — the Yanuka is on your home screen"));
+  (function initIos() {
+    const btn = $("#iosBtn"), sheet = $("#iosSheet"); if (!btn || !sheet) return;
+    const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+    if (!isIOS) btn.textContent = "Add to your phone";
+    const close = () => { sheet.hidden = true; document.body.style.overflow = ""; };
+    btn.onclick = () => {
+      if (standalone) return toast("You're already in the app ✓");
+      if (!isIOS && defPrompt) { defPrompt.prompt(); return; }
+      const note = $("#iosNote");
+      if (isIOS) {
+        const inSafari = /Safari/.test(navigator.userAgent) && !/CriOS|FxiOS|EdgiOS|GSA|Instagram|FBAN|FBAV/.test(navigator.userAgent);
+        note.textContent = inSafari ? "" : "Tip: open hayanuka.life in Safari first — other apps can't add to the Home Screen.";
+      } else {
+        note.textContent = "On Android: open the browser menu (⋮) and choose “Install app / Add to Home screen.”";
+      }
+      sheet.hidden = false; document.body.style.overflow = "hidden";
+    };
+    $("#iosClose").onclick = close;
+    sheet.addEventListener("click", (e) => { if (e.target === sheet) close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !sheet.hidden) close(); });
+  })();
+
   // ---- moments marquee: two auto-scrolling rows of real thumbnails (click to play)
   function buildMarquee() {
     const rows = [$("#mq1"), $("#mq2")]; if (!rows[0]) return;
