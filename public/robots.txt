@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://hayanuka.life/sitemap-index.xml
 Sitemap: https://hayanuka.life/sitemap-shiurim.xml
+Sitemap: https://hayanuka.life/sitemap-shiurim-2.xml

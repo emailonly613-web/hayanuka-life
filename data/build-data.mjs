@@ -3,6 +3,7 @@
 // en-content.mjs (hand translations).
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { CATEGORIES_EN, VIDEOS_EN, TFILOT_EN, MUSIC_EN, PARASHA_EN, YEARS_EN, ALON_SERIES_EN } from "./en-content.mjs";
+import { isAllowed } from "./banned.mjs"; // ⛔ owner cardinal: only the Yanuka, ever
 
 const read = (p) => JSON.parse(readFileSync(new URL(p, import.meta.url), "utf8"));
 const items = read("../../data/site-items.json");
@@ -71,6 +72,11 @@ for (const v of wave2) {
   if (seen.has(v.id)) continue; seen.add(v.id);
   lib.push({ id: v.id, he: v.title, channel: v.channel, official: false, kind: v.tab, duration: v.duration ?? null, views: null });
 }
+// ⛔ ONLY-THE-YANUKA law (owner 2026-07-24): drop everything that isn't his
+const before = lib.length;
+const allowed = lib.filter((v) => isAllowed(v.he, v.channel));
+console.log(`only-the-yanuka gate: ${before} -> ${allowed.length} (purged ${before - allowed.length})`);
+lib.length = 0; lib.push(...allowed);
 
 const model = {
   generated: null, // stamped by caller

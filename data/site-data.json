@@ -1,7 +1,7 @@
 {
  "generated": null,
  "counts": {
-  "library": 6842,
+  "library": 6588,
   "curated": 19,
   "alonim": 193,
   "tfilot": 10,
@@ -50622,129 +50622,12 @@
    "views": null
   },
   {
-   "id": "CVl9hU7BTjI",
-   "he": "הרב לסרי מברך את צופי הערוץ",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 10,
-   "views": null
-  },
-  {
-   "id": "McIPI6hXGD8",
-   "he": "רוצה להיוושע מהצרה? לזכות לישועה? כל השיטות",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 93,
-   "views": null
-  },
-  {
-   "id": "jkseJlozzkg",
-   "he": "המשך דרשה חוצבת להבות על מרן הרב מאזוז לכל בני התורה בישיבת כסא רחמים - הרב אדיר כהן 22.4.25",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 393,
-   "views": null
-  },
-  {
-   "id": "Hb3esItgpBE",
-   "he": "דרשה חוצבת להבות על מרן הרב מאזוז לכל בני התורה בישיבת כסא רחמים - הרב אדיר כהן 22.4.25",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 651,
-   "views": null
-  },
-  {
-   "id": "HC7TxOloKBM",
-   "he": "מרן הרב מאזוז בא בחלום ממש לאחר הפטירה לנכדו. החתן של מרן בעצמו מספר",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 216,
-   "views": null
-  },
-  {
-   "id": "n4lPXZ80UPo",
-   "he": "מומלץ!!!  חינם! הליכה בדרך לשמורת חולות ראשון לציון",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 122,
-   "views": null
-  },
-  {
    "id": "4bFT6Y09_Jk",
    "he": "אנשים מדווחים שוב ושוב, ניגוני הינוקא מורידים חרדה, דיכאון. טיפול רגשי לנפש שלך הישר מהיכל הנגינה",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "videos",
    "duration": 21,
-   "views": null
-  },
-  {
-   "id": "UaADBrM_NTg",
-   "he": "הגאון הרב מאיר אליהו - אתה העיקר מכניס לפה !! תבדוק מה אתה מכניס!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 61,
-   "views": null
-  },
-  {
-   "id": "fbIoINuK_CU",
-   "he": "אוראל מאליק מבקש לשלוח לו וואצאפ לפתיחת עמדת תפילין בבית ספר שלך.לתרומות ממעשרות או לעמדה שלח וואצאפ",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 46,
-   "views": null
-  },
-  {
-   "id": "J02P2yPZhbU",
-   "he": "אוראל מאליק מבקש לשלוח לו וואצאפ לפתיחת עמדת תפילין בכל בית ספר חילוני 050-3242993 לתרום ממעשרות",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 83,
-   "views": null
-  },
-  {
-   "id": "8Hn2gevOQB8",
-   "he": "אוראל מאליק מבקש לשלוח לו וואצאפ לפתיחת עמדת תפילין בכל בית ספר חילוני 050-3242993 לתרום ממעשרות",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 121,
-   "views": null
-  },
-  {
-   "id": "0m1mEmqVk9c",
-   "he": "היום בכנס הגאולה של גדולי ישראל בירושלים מרן הראשל\"צ הרב עמאר בוכה בתפילה",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 235,
-   "views": null
-  },
-  {
-   "id": "5-SUM0DPU_g",
-   "he": "הלכה בקטנה! הלכות תענית אסתר",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 101,
-   "views": null
-  },
-  {
-   "id": "Jm8PbMMy9R4",
-   "he": "היום בירושלים! גדולי ישראל במעמד של סליחות, תהילים למען גאולת עם ישראל ברחמים",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 245,
    "views": null
   },
   {
@@ -50775,24 +50658,6 @@
    "views": null
   },
   {
-   "id": "rvI57AJhhVg",
-   "he": "עדות ראשונה מכלי ראשון של אגם מספרת לאדמור הרב יאשיהו פינטו",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 842,
-   "views": null
-  },
-  {
-   "id": "C7w-fqaXk4c",
-   "he": "מה גוי חייב אם לומד תורה ולמה?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 81,
-   "views": null
-  },
-  {
    "id": "1T7kAj_s5KQ",
    "he": "איך לשלוח מייל להתייעצות עם הינוקא שליט\"א",
    "channel": "הגאון הינוקא שליט\"א",
@@ -50808,33 +50673,6 @@
    "official": false,
    "kind": "videos",
    "duration": 274,
-   "views": null
-  },
-  {
-   "id": "HsmijjQ8MfE",
-   "he": "גם חתולים וכלבים שמחים אור, אלי ואוהד שוחררו!!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 14,
-   "views": null
-  },
-  {
-   "id": "zwoiVQ7f7f0",
-   "he": "יש אלוקים אמרו החטופים שהשתחררו אתמול. תיעוד מהמערות בעזה שלב השחרור",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 196,
-   "views": null
-  },
-  {
-   "id": "Eawvv8SBwYk",
-   "he": "3 הלכות שיפתיעו אתכם. מדובר על יום טוב בלבד. לא שבת!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 128,
    "views": null
   },
   {
@@ -50856,291 +50694,12 @@
    "views": null
   },
   {
-   "id": "-85r-sSD43o",
-   "he": "שחרור החטופה אגם ברגר מחולון בריאה ושלימה",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 84,
-   "views": null
-  },
-  {
-   "id": "5RTUDVWvKXs",
-   "he": "הרב זמיר כהן   צום י בטבת",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 432,
-   "views": null
-  },
-  {
-   "id": "OsmgP2e58f0",
-   "he": "חשבתם על זה פעם?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 34,
-   "views": null
-  },
-  {
-   "id": "9TZFPfS0SUQ",
-   "he": "עוד חטופה שהתחילה להתחזק מאז שחזרה הביתה !!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 70,
-   "views": null
-  },
-  {
-   "id": "kstfmmAzEew",
-   "he": "מה לעשות בקבר של צדיק כדי שהנשמה של הצדיק תגיע לקבר?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 67,
-   "views": null
-  },
-  {
-   "id": "38l-at_MgEs",
-   "he": "כל גדולי הדור!! כוחנו בפה \"הכח שלנו זה תפילה\" להתפלל שוב ושוב ושוב",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 54,
-   "views": null
-  },
-  {
-   "id": "n8p1SlF7KYk",
-   "he": "למה צמים את צום גדליה בן אחיקם ?  היום!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 194,
-   "views": null
-  },
-  {
    "id": "72ge9D4lYko",
    "he": "קטע חדש ומדהים של ניגוני קודש עם הגאון הינוקא",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "videos",
    "duration": 1008,
-   "views": null
-  },
-  {
-   "id": "4Q0xmFYncU8",
-   "he": "נתניהו מזכיר את שם השם יתברך באו\"ם ומרגש את כל האו\"ם והיהודים בעולם",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 27,
-   "views": null
-  },
-  {
-   "id": "qhPQOourAlM",
-   "he": "איך לבשל בחג? איך להעביר אש קיימת בחג? איך לכבות את הגז בראש השנה? עוד לינק בתגובות!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 185,
-   "views": null
-  },
-  {
-   "id": "X493cBWDvys",
-   "he": "המהפך של ראם שרביט המאפר המפורסם החליט לשמור נגיעה ולחשב מסלול מחדש",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 456,
-   "views": null
-  },
-  {
-   "id": "QSOqsWVFZs4",
-   "he": "מדהים  פלאפונים מתפוצצים בלבנון מסר אדיר מהרב שניאור אשכנזי",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 90,
-   "views": null
-  },
-  {
-   "id": "Z7UtWtMjxK8",
-   "he": "הרב יגאל כהן! סליחות בחודש הרחמים! עזיבת החטא זה החלק הכי חשוב בחזרה בתשובה !!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 61,
-   "views": null
-  },
-  {
-   "id": "MjNn2ZAZ5jE",
-   "he": "3 טיפים חשובים גם לבקיאים לפני טבילת כלים",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 61,
-   "views": null
-  },
-  {
-   "id": "5AOWAdlwLQs",
-   "he": "הרבנית אביגיל בוסו שתחייה  ביתו של סידנא בבא סאלי שיעור על אלול",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 4062,
-   "views": null
-  },
-  {
-   "id": "GOQjrNgsuo8",
-   "he": "כולם שואלים איך עושים את סגולת רבי מתיא בן חרש",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 119,
-   "views": null
-  },
-  {
-   "id": "jsPyY1ftda4",
-   "he": "הרב יגאל כהן  תיקון פגם הברית וזרע לבטלה   🎞הסרט המלא!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 515,
-   "views": null
-  },
-  {
-   "id": "TOKCSgcUJag",
-   "he": "הוכחת אמיתות התורה   ר' אבי סביליה",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 1778,
-   "views": null
-  },
-  {
-   "id": "FuAH6_2Rv_g",
-   "he": "שמירת הקודש   שמירת הברית   איך להתגבר על יצר הרע ולא לפגום? הרב מנחם אדרי",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 1784,
-   "views": null
-  },
-  {
-   "id": "iZL6OTRGu5I",
-   "he": "החטוף קאיד פרחאן אלקאדי חולץ לאחר 326 יום ומצבו הרפואי תקין",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 156,
-   "views": null
-  },
-  {
-   "id": "xDrcWI6J-aM",
-   "he": "הגאון הרב מאיר אליהו  שכר עבירה   עבירה  יום עצמאות   תשפד",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 2501,
-   "views": null
-  },
-  {
-   "id": "oHPiH-Sfljk",
-   "he": "הגאון הרב מאיר אליהו  אירועי אחרית הימים  יזדים",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 4511,
-   "views": null
-  },
-  {
-   "id": "ZaR5cmstmHI",
-   "he": "הרב יוסף מזרחי משאיר את שחקני ליגת העל בלי שאלות ובמוסר עוצמתי !!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 4579,
-   "views": null
-  },
-  {
-   "id": "_iHBFk0DJTE",
-   "he": "לצפיה בט' באב - קשת טיטוס ומנורת המקדש   מירושלים לרומא וחזרה",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 436,
-   "views": null
-  },
-  {
-   "id": "qxu041tVZLk",
-   "he": "לצפיה בט' באב הרב עדס   בתפילה מהכותל המערבי מזעזע את העולמות , תראו מה קורה אחרי 58 שניות",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 156,
-   "views": null
-  },
-  {
-   "id": "MDe4l5ROeaw",
-   "he": "לצפיה בט' באב - כך אירע החורבן   צעד אחר צעד",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 933,
-   "views": null
-  },
-  {
-   "id": "zHxGdULfKr0",
-   "he": "בית המקדש   שלומי וסתם בבית המקדש   לצפיה בט' באב",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 1549,
-   "views": null
-  },
-  {
-   "id": "5D_PLFpX988",
-   "he": "לצפיה בט' באב בית המקדש פאר היצירה ממש בימי הורדוס",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 891,
-   "views": null
-  },
-  {
-   "id": "_MBnq-e0j58",
-   "he": "לשאלת רבים מה הגאון הרב דב הכהן קוק אומר על המצב הבטחוני המתוח⁉️",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 93,
-   "views": null
-  },
-  {
-   "id": "9fYO5ZKcI6k",
-   "he": "ממש מירון בנווה מונוסון. איזה הילולה היתה למקובל רבי חיים סינואני",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 50,
-   "views": null
-  },
-  {
-   "id": "WEUT1p3YluU",
-   "he": "ממש מירון בנווה מונוסון. איזה הילולה היתה למקובל רבי חיים סינואני - חלק ב",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 33,
-   "views": null
-  },
-  {
-   "id": "EX9ts67_DM4",
-   "he": "הגאון הרב מאיר אליהו מפציץ תרתי משמע כהרגלו כל ימי שלישי ביזדים בשעה 17:00 וב 18:15 במוסאיוף",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 237,
    "views": null
   },
   {
@@ -51162,147 +50721,12 @@
    "views": null
   },
   {
-   "id": "D-KGNGvjyt8",
-   "he": "הרב יחיאל אבוחצירא שליט\"א (אח של רבי דוד מנהריה) בהילולת הצדיק משטפנשט",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 77,
-   "views": null
-  },
-  {
-   "id": "LUKTu253s3w",
-   "he": "איך עושים תיקון חצות בימים הללו בצהרים ?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 115,
-   "views": null
-  },
-  {
-   "id": "gduNBrgTfTM",
-   "he": "המקובל החסיד הרב שלום אהרון שמואלי זצוק״ל נפטר 🕯️ היה אבא של המקובל הרב בניהו שמואלי",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 148,
-   "views": null
-  },
-  {
    "id": "iS-IrBDapPY",
    "he": "האם הבורא חייב לנו משהו? • הגאון הינוקא בשו\"ת מרתק בנושא אמונה ושירת הים",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "videos",
    "duration": 1304,
-   "views": null
-  },
-  {
-   "id": "kFgoEzYJ-ps",
-   "he": "בקשת הרב עמרמי עבור רפואת הרב עמוס חיים גואטה בן פורטונה",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 61,
-   "views": null
-  },
-  {
-   "id": "iIR-maRy_1M",
-   "he": "באיזה יום יבוא המשיח? הגאון הרב מאיר אליהו",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 61,
-   "views": null
-  },
-  {
-   "id": "Q9Dj7m4q0rc",
-   "he": "מטורף!!מי הציל את הבחורה מהטבח בנובה?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 250,
-   "views": null
-  },
-  {
-   "id": "rF7CA6ulJ5s",
-   "he": "🚨הרכב שנסע בשלג לבד🚨 מלא סיפורי ניסים בשבעה של סבא קדישא רבי שלום שמואלי זיע\"א אביו של הרב בניהו",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 585,
-   "views": null
-  },
-  {
-   "id": "r74yPsplxkw",
-   "he": "🚨 עוד המון סיפורי ניסים על עמוד העולם סבא קדישא רבי שלום שמואלי זיע\"א",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 672,
-   "views": null
-  },
-  {
-   "id": "FPMUs3lEg8o",
-   "he": "🚨המלאכים שהרימו את הגשר🚨  סיפורי ניסים על עמוד העולם סבא קדישא רבי שלום שמואלי זיע\"א",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 351,
-   "views": null
-  },
-  {
-   "id": "JNfngz4K-xQ",
-   "he": "הרב יוסף מזרחי   דרשה באוניברסיטת אריאל   אמת התורה",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 6314,
-   "views": null
-  },
-  {
-   "id": "B9REN7BbnHg",
-   "he": "הסרט שישנה לך את החיים!   הרב יוסף מזרחי   תורה ומדע",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 8301,
-   "views": null
-  },
-  {
-   "id": "wxoNM8d_m8Y",
-   "he": "מי הציל את הבחורה מהטבח בנובה? נס אדיר שעדין לא סופר",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 250,
-   "views": null
-  },
-  {
-   "id": "n8uGez-Riks",
-   "he": "נס גלוי שעדין לא סופר 7 באוקטובר. הדקל שממנו בה סוכה הגן עליו!! כי יצפנני בסכה ביום רעה יסתרני בסתר",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 498,
-   "views": null
-  },
-  {
-   "id": "9pu1b2PSfIY",
-   "he": "מדהים!!! נס שקרה עם הגאון הרב מאיר אליהו    חובה לשמוע!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 172,
-   "views": null
-  },
-  {
-   "id": "Md6wUmgTnF0",
-   "he": "הגאון הרב מאיר אליהו בוכה באמצע השיעור",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 129,
    "views": null
   },
   {
@@ -51333,71 +50757,8 @@
    "views": null
   },
   {
-   "id": "gJ8XL9ednhM",
-   "he": "הרב זיסהולץ במסר מעולם האמת",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 499,
-   "views": null
-  },
-  {
-   "id": "4SuOV4YwjZk",
-   "he": "הרב אברהם ברוך במסר קצר וברור רק למי שרוצה להיגאל/להינצל (כל יום שלישי ב 22:10 בלינק שבהערות)",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 152,
-   "views": null
-  },
-  {
-   "id": "U2YeeSXYV00",
-   "he": "מה צריך לעשות כדי להביא משיח⁩🔥שתפו🌏",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 344,
-   "views": null
-  },
-  {
-   "id": "5B78LvKCvjw",
-   "he": "2 חידושים יפיפיים. אתם תאהבו",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 187,
-   "views": null
-  },
-  {
-   "id": "1fGnBTPap3g",
-   "he": "מה אשה צריכה בזוגיות? מה גבר צריך?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 159,
-   "views": null
-  },
-  {
-   "id": "6coQYdrEXEI",
-   "he": "הרב זמיר כהן   פרשת במדבר",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "videos",
-   "duration": 489,
-   "views": null
-  },
-  {
    "id": "JApM3hqGdeY",
    "he": "The Yanuka Gaon offers support to the People of Israel and the Gueta family following the murder ...",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "Bvce-s9CgtQ",
-   "he": "Urgent message following the shocking murder of Rabbi Amos Kamus ben Fortuna‼️ Funeral at 1:00 PM...",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "shorts",
@@ -51425,15 +50786,6 @@
   {
    "id": "ArmyLlLpp_Y",
    "he": "הגאון הינוקא רוקד בחתונת אליה גר הצדק תלמידו שלשום, גם אותי רואים מפזז שם. חתונה מרגשת #הינוקא",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "vlTTGGN4Zm0",
-   "he": "מהו זמן חודש ניסן? תנצלו כל רגע!!",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "shorts",
@@ -51477,26 +50829,8 @@
    "views": null
   },
   {
-   "id": "_rM04qFRo70",
-   "he": "סובלים מסוכר? טרום סכרת?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
    "id": "XoR1QyysyuA",
    "he": "מה מברכים על חמשת סוגי הבשמים? לפי הגאון הינוקא שליטא",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "BLozze-K3Ys",
-   "he": "חובה לשתף!! הרבה בחורים מתחזקים ועושים בשוגג כי לא יודעים",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "shorts",
@@ -51549,15 +50883,6 @@
    "views": null
   },
   {
-   "id": "r4kn-cfGo0M",
-   "he": "סגולה לזיווג הגון",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
    "id": "5dcUrodteY8",
    "he": "אין דבר כזה בעיה! הגאון הינוקא",
    "channel": "הגאון הינוקא שליט\"א",
@@ -51578,15 +50903,6 @@
   {
    "id": "UoE9ejapf_M",
    "he": "עכשיו חלוקה חינם בקהילה של הגאון הינוקא חסד ואהבת חינם",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "FisRvYefY4g",
-   "he": "חדש! מה אמר עכשיו הצדיק הרב דב קוק לרב יהודה פרץ ?",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "shorts",
@@ -51648,44 +50964,8 @@
    "views": null
   },
   {
-   "id": "cHOYIPlhhiQ",
-   "he": "הלכות נענוע ארבעת המינים",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "sT6T29vv1UA",
-   "he": "איך לשמור על טריות 4 המינים?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "3oL1xnKq_Z8",
-   "he": "הלכות חג הסוכות הרב זמיר כהן",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
    "id": "aaWawTgLHkE",
    "he": "המסר של הגאון הינוקא למלחמה: לא לפחד",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "Lq_8etArqCs",
-   "he": "אזעקה נשמעת מה עושים? הרב חושף את הסגולה שמגנה אם כל המשפחה אומרים ביחד שוב ושוב ברצף",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "shorts",
@@ -51702,107 +50982,8 @@
    "views": null
   },
   {
-   "id": "nVVTxZersdc",
-   "he": "ילדה עם נשמה גבוהה אומרת לאמא שלה שלא מאמינה, את האמת!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
    "id": "e7XzZ6SMo_M",
    "he": "The Yanuka and Rabbi Yoshiyahu Pinto exchanging blessings",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "PdFVN4t3X5g",
-   "he": "להתפלל שוב ושוב!! אל תתייאשו, אבא רק מחכה לראות ולשמוע אותנו.",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "IhBWUifvWQQ",
-   "he": "תמשיך עם בורא עולם בלי לפחד מאף אחד! שאתה הולך עם השם נגד כל העולם",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "KkIGXeJrRfY",
-   "he": "לשאוף להתקרב לבורא יתברך  הגאון הרב מאיר אליהו",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "jZ2Iyl_3IEw",
-   "he": "אל תתייאשו, אבא רק מחכה לשמוע אותנו",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "rAFJTnG-Sbs",
-   "he": "אסור להגיד סליחות לפני חצות הלילה! הרב יצחק יוסף",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "ty74odD1w08",
-   "he": "האם אפשר להגיד סליחות ביום? הרב יצחק יוסף",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "Srhy4rAGXEg",
-   "he": "הלכה בקטנה   מתי מתחילים סליחות ספרדים ואשכנזים?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "LYXMpFJxYao",
-   "he": "סגולה לנחת מהילדים",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "_HUeJILrfjQ",
-   "he": "הרב זמיר כהן גלגול נשמות של ילד שרצחו אותו וגילה מי הרוצח כאשר הוא חזר בגלגול",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "G7GlRMf7HQA",
-   "he": "מה הילד המתוק הזה רוצה לפני השינה? שמע ישראל",
    "channel": "הגאון הינוקא שליט\"א",
    "official": false,
    "kind": "shorts",
@@ -51816,42 +50997,6 @@
    "official": false,
    "kind": "shorts",
    "duration": null,
-   "views": null
-  },
-  {
-   "id": "C2vvtgOH8t4",
-   "he": "מחופי עזה לישראל: רגעי חילוץ חטופים מהרצועה. מליון פעם תודה להשם!!!",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "MnPUP_82VSs",
-   "he": "מה הילד הזה לומד מאביו החילוני? שמע ישראל שעל המיטה",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "YBet3IiZsOU",
-   "he": "איך עושים הבדלה בצאת החג ?",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "streams",
-   "duration": 37,
-   "views": null
-  },
-  {
-   "id": "zp5rX9DsB3s",
-   "he": "איך מתחילים להתחזק כבוד הרב ? אני מבית חילוני ואני לא יודע/ת איך להתחיל.  הלכות למתחילים",
-   "channel": "הגאון הינוקא שליט\"א",
-   "official": false,
-   "kind": "streams",
-   "duration": 433,
    "views": null
   },
   {
@@ -56832,15 +55977,6 @@
    "views": null
   },
   {
-   "id": "KxuwrRAiSjg",
-   "he": "🚬 חזק: מה גורם לבנאדם לקחת את הסיגריה הראשונה🎦🚬🚬🚬 וגם: מה מנהל את העולם?",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 263,
-   "views": null
-  },
-  {
    "id": "D7ivndJwkH8",
    "he": "התכלית בעולם הזה זה תפילה   דיבורים על התכלית מהגאון הינוקא #הינוקא  #חשוב",
    "channel": "הינוקא | לא רשמי - רק תורת אמת!",
@@ -56874,321 +56010,6 @@
    "official": false,
    "kind": "videos",
    "duration": 311,
-   "views": null
-  },
-  {
-   "id": "cPCH-n_6iFo",
-   "he": "ישיבת פוניבז׳ עם דגלי פלסטין",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 7,
-   "views": null
-  },
-  {
-   "id": "xaUPUSdnwgg",
-   "he": "Another bright day | עוד יום יאיר",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 247,
-   "views": null
-  },
-  {
-   "id": "6sCVKbguHF0",
-   "he": "חניון עין זיתים מהרחפן",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 32,
-   "views": null
-  },
-  {
-   "id": "EOESCfljnqM",
-   "he": "חניון גן הצפון מהרחפן",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 34,
-   "views": null
-  },
-  {
-   "id": "S2PUVmp1hM4",
-   "he": "הרב שניר גואטה - פרשת ואתחנן",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 215,
-   "views": null
-  },
-  {
-   "id": "i4AYo_pVs0k",
-   "he": "דלתון ממעוף הרחפן ",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 54,
-   "views": null
-  },
-  {
-   "id": "Nh4V17LKC28",
-   "he": "שמורת נחל אכזיב עין זיתים עד הים ממעוף הרחפן",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 7,
-   "views": null
-  },
-  {
-   "id": "JeKP0aLrIXQ",
-   "he": "ירושלים ממעוף הרחפן",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 31,
-   "views": null
-  },
-  {
-   "id": "DdfbRpOigYU",
-   "he": "📱אייפון 16 פרו מקס שרד נפילה של 800 מטר ממטוס   ועוד תיעד את כל הדרך למטה!",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 46,
-   "views": null
-  },
-  {
-   "id": "T1_STPqOOB8",
-   "he": "תל אביב,  רכב היברידי עולה באש, ככל הנראה מהחום",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 20,
-   "views": null
-  },
-  {
-   "id": "t2XK7gHYDM8",
-   "he": "תאילנד פינת ירושלים - גשם בירושלים עכשיו 12 באוגוסט",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 31,
-   "views": null
-  },
-  {
-   "id": "P3YaFstfGv8",
-   "he": "בצל רדיפת השלטונות את בני הישיבות: ביקש מנהיג הדור מרן הגר\"ד לנדו לשורר את 'עוצו עצה'.",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 23,
-   "views": null
-  },
-  {
-   "id": "KhCivI7LFRI",
-   "he": "מרן הגר\"ע יוסף זיע\"א זועק נגד חוק הגיוס \"אם נשב בחיבוק ידיים הקב\"ה יתבע ממנו, למה שתקתם, למה עמדתם",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 54,
-   "views": null
-  },
-  {
-   "id": "LnGfXwRTjwE",
-   "he": "הפגנות בתל אביב: המשטרה עצרה 13 מפירי סדר.",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 77,
-   "views": null
-  },
-  {
-   "id": "qhdIzXDXEqI",
-   "he": "סרטון לגו, ההתקפה הישראלית: ישראל vs אירן in lego",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 72,
-   "views": null
-  },
-  {
-   "id": "exIDb4OHfEg",
-   "he": "תיעוד של מטוס מפיל כטב\"מ איראני מטווח אפס בשמי סוריה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 45,
-   "views": null
-  },
-  {
-   "id": "uSW1X9cMtio",
-   "he": "RASHBI - ראפ רבי שמעון",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 214,
-   "views": null
-  },
-  {
-   "id": "px2hDoNy42g",
-   "he": "lion of love",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 195,
-   "views": null
-  },
-  {
-   "id": "xF2PRssUI9o",
-   "he": "תפילות - הקב״ה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 240,
-   "views": null
-  },
-  {
-   "id": "1oJa8Myp2LY",
-   "he": "מבשרת ציון",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 240,
-   "views": null
-  },
-  {
-   "id": "FSEXgylRgC0",
-   "he": "רבי שמעון בר יוחאי",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 186,
-   "views": null
-  },
-  {
-   "id": "xrLJnXYx-B0",
-   "he": "Close to You",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 190,
-   "views": null
-  },
-  {
-   "id": "onXjR8wNjfo",
-   "he": "לִישׁוּעָתְךָ קִוִּיתִי ה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 210,
-   "views": null
-  },
-  {
-   "id": "hgUroEZfrHg",
-   "he": "קָרוֹב אֵלֶיךָ",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 241,
-   "views": null
-  },
-  {
-   "id": "zFJ_2m_WwCk",
-   "he": "למה נולדתי",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 180,
-   "views": null
-  },
-  {
-   "id": "gZpmGJDN6n0",
-   "he": "תִּינוֹק בֵּין הַדַּפִּים",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 238,
-   "views": null
-  },
-  {
-   "id": "zcl7Ef1MVEw",
-   "he": "Telegram Bot Creation Guide יצירת בוט GPT בקלות - הקהילה של אור",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 731,
-   "views": null
-  },
-  {
-   "id": "b96J3S_nto8",
-   "he": "חסיד שוטה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 9,
-   "views": null
-  },
-  {
-   "id": "-IzLk6bLBcc",
-   "he": "לפעמים לא כדאי להוכיח משהו למי שלא מאמין אבל אנחנו עדיין מנסים",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 29,
-   "views": null
-  },
-  {
-   "id": "RP8pXnDdCH4",
-   "he": "שידור חי מאסדת נפט מול חופי קליפורניה, נתפס יצור ימי מסתורי שמזכיר דינוזאור שנכחד - מזוֹזאוּרוּס.",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 31,
-   "views": null
-  },
-  {
-   "id": "6vP4IzwDpL8",
-   "he": "😱 צילומים מרהיבים של עימותים ליליים בין צבא סוריה 🇸🇾 למחבלים טורקים 🇹🇷",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 31,
-   "views": null
-  },
-  {
-   "id": "qxvQ8mBeOwU",
-   "he": "איראן: ‏פיצוץ ענק התרחש בבית הזיקוק של עבאדן באהוואז. הסיבות והממדים של הפיצוץ עדיין לא ידועים",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 37,
-   "views": null
-  },
-  {
-   "id": "DaeiA_SRAJY",
-   "he": "25 kills pubg פאבג׳י ישראל",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 56,
-   "views": null
-  },
-  {
-   "id": "woG54tME3iE",
-   "he": "pubg israel crazy",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 160,
-   "views": null
-  },
-  {
-   "id": "G5IljYfN6c4",
-   "he": "crazy pubg mobile פאבג׳י מטורף",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "videos",
-   "duration": 191,
    "views": null
   },
   {
@@ -57579,15 +56400,6 @@
    "views": null
   },
   {
-   "id": "YW-WUxK-yKg",
-   "he": "🚀😱השגחה פרטית בירושלים: תיעוד הנפילה של הטיל יום ראשון [יב אדר] ערב פורים",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
    "id": "t3CV6oygMKc",
    "he": "🔥מה יקרה בפורים? המלחמה עם איראן - המסר המצמרר של הגאון הינוקא מלפני שנתיים #הינוקא #הגאוןהינוקא",
    "channel": "הינוקא | לא רשמי - רק תורת אמת!",
@@ -57867,15 +56679,6 @@
    "views": null
   },
   {
-   "id": "XagR83FFHgc",
-   "he": "גיוס בני ישיבה? על לעזוב את התורה אין מחילה | הרב מרדכי שריקי",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
    "id": "0OHP6oncRIs",
    "he": "ערק הישועות | אשתו של הבבא סאלי הרבנית סימה אבוחצירא שלחה לגאון הינוקא ערק מהבבא סאלי לכבוד ההילולא",
    "channel": "הינוקא | לא רשמי - רק תורת אמת!",
@@ -58146,24 +56949,6 @@
    "views": null
   },
   {
-   "id": "pk_aQKTaH9c",
-   "he": "פינוי גבעת צור משגבי - 2025 בושה למשטרה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "ycWL_thZNGY",
-   "he": "תורת הנבואה מהרמח״ל - הרב מרדכי שריקי #רמחל מכון רמחל",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
    "id": "m6AaDl0uh4U",
    "he": "הלומי קרב ונכי צה״ל במפגש מרגש עם הגאון הינוקא #הינוקא",
    "channel": "הינוקא | לא רשמי - רק תורת אמת!",
@@ -58281,42 +57066,6 @@
    "views": null
   },
   {
-   "id": "HphhTh8Lcoo",
-   "he": "פירוש המילה ״לבוש״ הרב מרדכי שריקי",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "p3IxL0ujlb4",
-   "he": "שמחת התורה הרב מרדכי שריקי מכון #רמחל",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "y5YhZazrzmQ",
-   "he": "מדוע קיבלו שבת לפני מתן תורה הרב מרדכי שריקי",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "J_QjFm6FUNE",
-   "he": "שליטת הכלים הרב מרדכי שריקי מכון רמחל",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
    "id": "3S4rCMyCPFk",
    "he": "אלפים בשירת ההלל בתפילות שחרית ראש חודש כסלו אצל הגאון הינוקא ##הינוקא  #yanuka",
    "channel": "הינוקא | לא רשמי - רק תורת אמת!",
@@ -58391,384 +57140,6 @@
   {
    "id": "c9fqsnY_m9c",
    "he": "בשידור חי ! הנס שריגש קהל שלם בבית מדרשו של הינוקא ביום שישי האחרון",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "7hJqmPdy-l0",
-   "he": "רובוטים אנושיים Robot core #usa #funny #robot #airobot #cute #fyp #viral #foryou #funnyshortsvideo",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "Y8jRExdymMQ",
-   "he": "💰צפו  רכב סייברטראק של טסלה נחסם מרחוק בזמן נסיעה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "Yh7f-8FbMY8",
-   "he": "בינתיים בנגב    בדואי מנסה להימלט מבלשים 👀",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "GJg_6k9_3vg",
-   "he": "תנינים בדלת: בפלורידה, דיירים ששמעו דפיקות בדלת נדהמו לגלות שני תנינים שמנסים להיכנס לביתם",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "inlrYEZnwNM",
-   "he": "היום התקיימו מספר הפגנות נגד ביטול הסטטוס העצמאי של לשכת חקירות השחיתות של אוקראינה  והן עדין בקייב.",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "224Ig__QfI8",
-   "he": "אוהדי בית״ר ירושלים ברחובות בוקרטש. ריאל מדריד",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "rTAAuaXySQ0",
-   "he": "תיעוד דרמטי של נפילת טיל בגוש דן #iran #ישראל #war",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "l3RX_GDRRPo",
-   "he": "תקיפה בשיראז",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "RI3JwXT0L7c",
-   "he": "הותקף איזור התעשיה האיראני ספידרוד #ישראל #יהודי #music #ישראל #יהודי #god #gpt #iran #israel",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "OCP-52yuu9k",
-   "he": "חיסול ממוקד בטהרן #יהודי #music #ישראל #god #love #ai #bot #gpt #iran",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "-4yy7hgzlWs",
-   "he": "תיעוד מהתקיפות האוויריות בראשט שבאיראן",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "OysXtXavGBw",
-   "he": "ביידן וטראמפ ענק בנון!! Biden and Trump",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "tzKT2xhF0-U",
-   "he": "אין שכל...",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "i69UVkwCve8",
-   "he": "שתה שתה אידיוט",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "WUBAxg_vjYA",
-   "he": "תבעט תבעט טיפש",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "ef2A7HlUdlg",
-   "he": "רק דוסים יבינו   בדיחה מגזרית עם מתן פרץ   סרוגים",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "nLVGU4vDygg",
-   "he": "אדם משוגע",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "Iia5Qq8ATGU",
-   "he": "אשכנזי אוכל חריף",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "UFvb6e2moJM",
-   "he": "הצפות חושחוש",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "mXEwb3rDQz0",
-   "he": "לרויה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "dWSrcjTflRA",
-   "he": "בתאבון",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "y-6TW7dUdKg",
-   "he": "מטורף: להציל דוב זה לא להציל חתול",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "Ee2IeTEwmUk",
-   "he": "וואו השגחה פרטית של הבורא ברוך הוא wow",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "b7sq_ar1j-Y",
-   "he": "כפילים של שחקנים מפורסמים",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "T19WHrm_qoM",
-   "he": "איך מותגים עושים פרסומות צפו",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "sIncVwRjxL0",
-   "he": "Украинский террорист-смертник перехвачен в России.",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "OLuEF61mqjk",
-   "he": "תיעוד מאחת התקיפות בדאחיה, לבנון",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "PUuVWvZ1OUw",
-   "he": "גם עכשיו חיפוש אחר תאי כלא בסוריה שלא הגיעו אליהם",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "UXcYrvF-K54",
-   "he": "שלג בחרמון 50 ס״מ עכשיו",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "gXGiRfda8bg",
-   "he": "שיגור מיירט לטיל מתימן הלילה 30 בדצמבר",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "SYXSu5hvaPA",
-   "he": "מפחיד תקלות במטריקס לא אמיתיי",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "AUzUR8g6kwo",
-   "he": "מבט מקרוב על הציפור הפרהיסטורית ביותר שחיה כיום ראש הלוויתן, או כפי שהוא מכונה גם אנפה מלכותית",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "9wJ94GvJWls",
-   "he": "תקלה במטריקס: זברה רודפת אחרי לביאה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "bUc9tfwXuCY",
-   "he": "באוסטרליה גילו יצור מוזר במבט ראשון זה היה ענף רגיל אבל הוא התחיל לזוז ולהשמיע קולות כמו ציוץ של חגב",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "QCPi9NA-ypA",
-   "he": "פגיעת ברק בקצרין",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "qvkDDNf_3Dc",
-   "he": "ירוט הירי לירושלים בשבת קודש ע״י חץ או קלע דוד",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "fXpgrpD9sTw",
-   "he": "גם שוורים יכולים לעשות סלטות",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "hUGAycAGVhs",
-   "he": "העתיד הגיע!! רובוטים משלוחנים",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "mcl2pgueFWw",
-   "he": "תיעוד אחת התקיפות בתימן בישראל אומרים התגובה לא תמה",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "BWq6MLZn5VQ",
-   "he": "תיעוד: מסביבת נמל התעופה הבינלאומי בצנעא נמל התעופה של צנעא הושבת, המסלולים נהרסו, מגדל הפיקוח נחרב",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "rs4P7Wypm_Y",
-   "he": "#pubgmobile #howtocreateaiphoto   שפירא תקיפה על הגרעין באיראן היכל אברהם עוד יותר טוב",
-   "channel": "הינוקא | לא רשמי - רק תורת אמת!",
-   "official": false,
-   "kind": "shorts",
-   "duration": null,
-   "views": null
-  },
-  {
-   "id": "QQGogZeZc9k",
-   "he": "11 בספטמבר 2024",
    "channel": "הינוקא | לא רשמי - רק תורת אמת!",
    "official": false,
    "kind": "shorts",
@@ -59376,24 +57747,6 @@
    "official": false,
    "kind": "search",
    "duration": 395,
-   "views": null
-  },
-  {
-   "id": "avop66ElyFE",
-   "he": "הינוקא - למדן או חמדן? | הרב אמנון יצחק שליט״א! ",
-   "channel": "הרב אמנון יצחק ! [לא רשמי]",
-   "official": false,
-   "kind": "search",
-   "duration": 484,
-   "views": null
-  },
-  {
-   "id": "eM2pWRk2GeQ",
-   "he": "\"רוצה מיליארדים, שלא יהיה עשיר ממני\": הקלטות ה\"ינוקא\" נחשפות",
-   "channel": "חדשות 13",
-   "official": false,
-   "kind": "search",
-   "duration": 736,
    "views": null
   },
   {
@@ -60204,15 +58557,6 @@
    "official": false,
    "kind": "search",
    "duration": 33,
-   "views": null
-  },
-  {
-   "id": "7iO7DpauUs0",
-   "he": "בהלכות שבת ועל דברי הרב אמנון יצחק על הרב שלמה יהודה בארי המכונה בפי ההמון הינוקא עברית",
-   "channel": "הרב עמרם גרויז האדמו\" ר מנייטרא - בית שמש",
-   "official": false,
-   "kind": "search",
-   "duration": 1274,
    "views": null
   },
   {
@@ -61170,15 +59514,6 @@
    "views": null
   },
   {
-   "id": "ESIdGCa3h48",
-   "he": "I Tried To Expose The Yanuka... Then I Witnessed A Miracle | Rabbi Harry Rozenberg",
-   "channel": "None of your Business Podcast and Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 5394,
-   "views": null
-  },
-  {
    "id": "oCiqDZpVhnY",
    "he": "Why Some Christians Believe This Israeli Rabbi is the ANTI-CHRIST –   The Yanuka",
    "channel": "Jews for Judaism",
@@ -61269,42 +59604,6 @@
    "views": null
   },
   {
-   "id": "GTtUuZZAqso",
-   "he": "Yanuka in English - Pathways of The Redemption 1/16",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 260,
-   "views": null
-  },
-  {
-   "id": "yaXEqn54zAI",
-   "he": "Livestream Zohar Study w/  @SeekersofUnity     &   @TheEsotericaChannel     - The Yanuka - 3 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 6123,
-   "views": null
-  },
-  {
-   "id": "SP6s-jZy8gw",
-   "he": "Yanuka in English - Pathways of the Torah 24/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 261,
-   "views": null
-  },
-  {
-   "id": "V-KK7tyKcck",
-   "he": "Yanuka in English - Pathways of the Torah 25/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 261,
-   "views": null
-  },
-  {
    "id": "GRvVmVzG6mw",
    "he": "UPDATE 2022 | Is Jizkiahu Ben David The Jewish Messiah | The Yanuka",
    "channel": "Shayel Kriel",
@@ -61320,15 +59619,6 @@
    "official": false,
    "kind": "search",
    "duration": 325,
-   "views": null
-  },
-  {
-   "id": "g5ylwU0EscM",
-   "he": "Yanuka in English - Quest for Truth",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 1321,
    "views": null
   },
   {
@@ -61350,39 +59640,12 @@
    "views": null
   },
   {
-   "id": "TlCdbk8uarE",
-   "he": "Yanuka in English - Pathways of the Torah 1/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 173,
-   "views": null
-  },
-  {
-   "id": "YfcSR4NVpNg",
-   "he": "Yanuka in English - Pathways of the Torah 22/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 241,
-   "views": null
-  },
-  {
    "id": "8fwd3gMY9Kk",
    "he": "Is the Jewish Messiah Here? The Yanuka or The Chabad Rebbe",
    "channel": "Shayel Kriel",
    "official": false,
    "kind": "search",
    "duration": 369,
-   "views": null
-  },
-  {
-   "id": "vRrxtadkCWY",
-   "he": "Yanuka in English - Pathways of the Torah 23/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 374,
    "views": null
   },
   {
@@ -61395,84 +59658,12 @@
    "views": null
   },
   {
-   "id": "anCA3kdErR8",
-   "he": "Livestream Zohar Study w/  @SeekersofUnity  &  @TheEsotericaChannel  - The Yanuka - 4 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 5481,
-   "views": null
-  },
-  {
-   "id": "Ne5qs-znDFU",
-   "he": "Yanuka in English - Pathways of the Torah 5/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 241,
-   "views": null
-  },
-  {
-   "id": "vv8vJObAnQA",
-   "he": "Yanuka in English - Pathways of The Faith 2/11",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 542,
-   "views": null
-  },
-  {
-   "id": "GoLgpBmrBLc",
-   "he": "Yanuka in English - Pathways of the Torah 14/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 482,
-   "views": null
-  },
-  {
-   "id": "qTkkHMuMbw0",
-   "he": "Livestream Zohar Study w/ @SeekersofUnity  & @TheEsotericaChannel  - The Yanuka - 1 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 5703,
-   "views": null
-  },
-  {
-   "id": "TTOVRruDIi8",
-   "he": "Livestream Zohar Study w/@SeekersofUnity   & @TheEsotericaChannel    - The Yanuka - 8 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 5546,
-   "views": null
-  },
-  {
    "id": "JkEALiM2JyE",
    "he": "WHY DO JEWS LIGHT A BONFIRE ON LAG BAOMER? The Yanuka: Respecting Your Friend - Rabbi Eli Mansour",
    "channel": "Shul․com",
    "official": false,
    "kind": "search",
    "duration": 114,
-   "views": null
-  },
-  {
-   "id": "iqdWio7Gg58",
-   "he": "Yanuka in English - I Shall Rejoice in HaShem (Rules of Happiness)",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 1221,
-   "views": null
-  },
-  {
-   "id": "ni7mDrM0ULQ",
-   "he": "Yanuka reveals secrets of the Kabbalah",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 3860,
    "views": null
   },
   {
@@ -61485,48 +59676,12 @@
    "views": null
   },
   {
-   "id": "xZ53Ei20VSg",
-   "he": "Yanuka in English - Pathways of The Faith 8/11",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 260,
-   "views": null
-  },
-  {
    "id": "cH5MziGJMrM",
    "he": "Amid the Hardships - מתוך הקושי",
    "channel": "The Yanuka Music - Topic",
    "official": false,
    "kind": "search",
    "duration": 276,
-   "views": null
-  },
-  {
-   "id": "D4dqDP7GLrc",
-   "he": "Livestream Zohar Study w/ @SeekersofUnity  & @TheEsotericaChannel  - The Yanuka - 9 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 6175,
-   "views": null
-  },
-  {
-   "id": "Q6F0G1ScAxE",
-   "he": "Yanuka in English - Pathways of the Torah 10/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 122,
-   "views": null
-  },
-  {
-   "id": "iIfPM5HMwDE",
-   "he": "Yanuka in English - Love of Humanity and The Creation",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 978,
    "views": null
   },
   {
@@ -61548,138 +59703,12 @@
    "views": null
   },
   {
-   "id": "sB4pKRBoQs8",
-   "he": "Yanuka in English - Path of the Tree of Life - Introduction",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 602,
-   "views": null
-  },
-  {
-   "id": "wa2fdemkD6s",
-   "he": "Yanuka in English - Pathways of the Torah 26/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 481,
-   "views": null
-  },
-  {
-   "id": "53GX1y1NVI8",
-   "he": "Yanuka in English - Refined Behavior is the Foundation for Torah",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 611,
-   "views": null
-  },
-  {
-   "id": "YjtCZlmIUXE",
-   "he": "Yanuka in English - Pathways of the Torah 2/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 489,
-   "views": null
-  },
-  {
    "id": "P8tRto9v_jM",
    "he": "Yearning - געגועים",
    "channel": "The Yanuka Music - Topic",
    "official": false,
    "kind": "search",
    "duration": 244,
-   "views": null
-  },
-  {
-   "id": "HkXWJ-ucDoY",
-   "he": "Yanuka in English - Pathways of the Torah 18/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 261,
-   "views": null
-  },
-  {
-   "id": "XxK8RfiZJu0",
-   "he": "Livestream Zohar Study w/  @SeekersofUnity  & @TheEsotericaChannel  - The Yanuka - 5 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 6088,
-   "views": null
-  },
-  {
-   "id": "3uildv-sY8w",
-   "he": "Yanuka in English - Pathways of Attaining Closeness to the Lord 4/6",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 285,
-   "views": null
-  },
-  {
-   "id": "nXzvGFEaReo",
-   "he": "Livestream Zohar Study w/  @SeekersofUnity & @TheEsotericaChannel   - The Yanuka - 7 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 5613,
-   "views": null
-  },
-  {
-   "id": "Gvx7OLBHfRo",
-   "he": "Yanuka in English - Pathways of the Torah 6/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 197,
-   "views": null
-  },
-  {
-   "id": "XqoN42Dn7gI",
-   "he": "Yanuka in English - Pathways of the Torah 13/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 374,
-   "views": null
-  },
-  {
-   "id": "nUfjcKChsqc",
-   "he": "Yanuka in English - Pathways of the Torah 19/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 197,
-   "views": null
-  },
-  {
-   "id": "rRdGxxjFD3Q",
-   "he": "Livestream Zohar Study w/ @SeekersofUnity    &  @TheEsotericaChannel    - The Yanuka - 2 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 6607,
-   "views": null
-  },
-  {
-   "id": "z1MIBetsQNE",
-   "he": "Yanuka in English - Pathways of The Redemption 14/16",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 211,
-   "views": null
-  },
-  {
-   "id": "NEuhylozrig",
-   "he": "Yanuka in English - Pathways of the Torah 15.5/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 197,
    "views": null
   },
   {
@@ -61746,15 +59775,6 @@
    "views": null
   },
   {
-   "id": "g_-i6TbOwOc",
-   "he": "Yanuka Rav Shlomo Yehuda Ben David",
-   "channel": "God's Soldiers Ministry",
-   "official": false,
-   "kind": "search",
-   "duration": 320,
-   "views": null
-  },
-  {
    "id": "ooqwaj9x3Js",
    "he": "R' Shlomo Yehuda Rechnitz's View on Shidduchim and More - Oorahthon 2015",
    "channel": "Oorah",
@@ -61770,15 +59790,6 @@
    "official": false,
    "kind": "search",
    "duration": 1249,
-   "views": null
-  },
-  {
-   "id": "tUbsOUqkEYQ",
-   "he": "The Yanuka Rav Shlomo Yehuda at a mezuzah affixing ceremony",
-   "channel": "God's Soldiers Ministry",
-   "official": false,
-   "kind": "search",
-   "duration": 577,
    "views": null
   },
   {
@@ -61809,30 +59820,12 @@
    "views": null
   },
   {
-   "id": "M7X165UDLqY",
-   "he": "Is He The Antichrist? The Yanuka Rav Shlomo Yehuda Be'eri  (Article)",
-   "channel": "In The Pines Ministries",
-   "official": false,
-   "kind": "search",
-   "duration": 2332,
-   "views": null
-  },
-  {
    "id": "9YzW1bR_ywY",
    "he": "Rav Shlomo Yehuda aka The Yanuka - The Importance of Shirat HaYam (English)",
    "channel": "Eliyahu Pereira ¦ Gate of Unity",
    "official": false,
    "kind": "search",
    "duration": 316,
-   "views": null
-  },
-  {
-   "id": "dxvCqoli4dk",
-   "he": "Messia der (Israel te messia) Yanuka Rav Shlomo Yehuda",
-   "channel": "Krista Ministry",
-   "official": false,
-   "kind": "search",
-   "duration": 673,
    "views": null
   },
   {
@@ -61878,15 +59871,6 @@
    "official": false,
    "kind": "search",
    "duration": 320,
-   "views": null
-  },
-  {
-   "id": "DRyx72-Z2N8",
-   "he": "Yanuka Rav Shlomo Yehuda Warning To Church",
-   "channel": "God's Soldiers Ministry",
-   "official": false,
-   "kind": "search",
-   "duration": 1062,
    "views": null
   },
   {
@@ -62178,30 +60162,12 @@
    "views": null
   },
   {
-   "id": "dlcbrufWyNs",
-   "he": "The Yanuka Rav Shlomo Yehuda at the Matriarch Rachel's grave",
-   "channel": "God's Soldiers Ministry",
-   "official": false,
-   "kind": "search",
-   "duration": 410,
-   "views": null
-  },
-  {
    "id": "l0QMw6TqHDM",
    "he": "The Yanuka Rav Shlomo Yehuda???",
    "channel": "Prophets of GoodWorks Wi",
    "official": false,
    "kind": "search",
    "duration": 4413,
-   "views": null
-  },
-  {
-   "id": "DQaIM4fObsA",
-   "he": "Yanuka Rav Shlomo Yehuda The False Messiah?",
-   "channel": "God's Soldiers Ministry",
-   "official": false,
-   "kind": "search",
-   "duration": 652,
    "views": null
   },
   {
@@ -62223,15 +60189,6 @@
    "views": null
   },
   {
-   "id": "nOrVxZk_0Us",
-   "he": "The Yanuka and Some of His \"Supernatural\" Healings!",
-   "channel": "In The Pines Ministries",
-   "official": false,
-   "kind": "search",
-   "duration": 1600,
-   "views": null
-  },
-  {
    "id": "4RR9wH5eVIk",
    "he": "Believers are not surprised by false messiahs and prophets. #2022  #yanuka rav shlomo yehuda",
    "channel": "Kashara Spivey",
@@ -62247,15 +60204,6 @@
    "official": false,
    "kind": "search",
    "duration": 3440,
-   "views": null
-  },
-  {
-   "id": "Y3zRS7lAQ3o",
-   "he": "The Yanuka   Some Supernatural Spirit Manifestations",
-   "channel": "In The Pines Ministries",
-   "official": false,
-   "kind": "search",
-   "duration": 1122,
    "views": null
   },
   {
@@ -62430,48 +60378,12 @@
    "views": null
   },
   {
-   "id": "isMa4a_CiQs",
-   "he": "Yanuka in English - Pathways of the Torah 9/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 197,
-   "views": null
-  },
-  {
-   "id": "1EyxB6qomBY",
-   "he": "Yanuka in English - Pathways of the Torah 3/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 261,
-   "views": null
-  },
-  {
    "id": "9qIQj471q7g",
    "he": "Yanuka Torah - Parashat Mishpatim - Rav Asher Gadaev 5783",
    "channel": "B'YACHAD",
    "official": false,
    "kind": "search",
    "duration": 186,
-   "views": null
-  },
-  {
-   "id": "19UNotChdAk",
-   "he": "Yanuka in English - Pathways of the Torah 12/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 197,
-   "views": null
-  },
-  {
-   "id": "8DKkQ9LNuUw",
-   "he": "Yanuka in English - Pathways of the Torah 17/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 181,
    "views": null
   },
   {
@@ -62484,48 +60396,12 @@
    "views": null
   },
   {
-   "id": "3Q2jbi5DUtM",
-   "he": "Yanuka in English - Pathways of the Torah 7/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 181,
-   "views": null
-  },
-  {
-   "id": "zrnGWEnkapQ",
-   "he": "Yanuka in English - Pathways of the Torah 20/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 181,
-   "views": null
-  },
-  {
    "id": "GkJRtFXe6fY",
    "he": "Yanuka Torah- Rav Asher Gadaev  5783",
    "channel": "LESHEM TORAH",
    "official": false,
    "kind": "search",
    "duration": 708,
-   "views": null
-  },
-  {
-   "id": "vZeih2WheEc",
-   "he": "Yanuka in English - Pathways of the Torah 16/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 211,
-   "views": null
-  },
-  {
-   "id": "rwNRtuGVpSA",
-   "he": "Yanuka in English - Pathways of the Torah 21/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 316,
    "views": null
   },
   {
@@ -62538,48 +60414,12 @@
    "views": null
   },
   {
-   "id": "cHB825iLE1c",
-   "he": "Yanuka in English - Pathways of the Torah 15/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 499,
-   "views": null
-  },
-  {
-   "id": "nXsNDL6ugQk",
-   "he": "Yanuka in English - Pathways of the Torah 8/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 541,
-   "views": null
-  },
-  {
-   "id": "a2dK_q1nsCI",
-   "he": "Yanuka in English - Pathways of the Torah 11/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 241,
-   "views": null
-  },
-  {
    "id": "JDAoZpEpeKE",
    "he": "Yanuka Torah/ Toledot.   Rav Asher Gadaev 5783",
    "channel": "LESHEM TORAH",
    "official": false,
    "kind": "search",
    "duration": 717,
-   "views": null
-  },
-  {
-   "id": "S3E2aPfvYSM",
-   "he": "Yanuka in English - Truth",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 1256,
    "views": null
   },
   {
@@ -62601,39 +60441,12 @@
    "views": null
   },
   {
-   "id": "k_A_GSGWtkQ",
-   "he": "Yanuka in English - Pathways of Virtuous Attributes 18/24",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 243,
-   "views": null
-  },
-  {
-   "id": "dnp7oDoPJhs",
-   "he": "Yanuka in English - Pathways of the Torah 4/26",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 438,
-   "views": null
-  },
-  {
    "id": "X7FctzGnNHM",
    "he": "Yanuka Torah/ Vayetze.  Rav Asher Gadaev 5783",
    "channel": "LESHEM TORAH",
    "official": false,
    "kind": "search",
    "duration": 743,
-   "views": null
-  },
-  {
-   "id": "VUN6gOCZBZ0",
-   "he": "Yanuka in English - A Broken Heart and a Joyful Heart",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 1058,
    "views": null
   },
   {
@@ -62646,30 +60459,12 @@
    "views": null
   },
   {
-   "id": "0ZYRbpN5KCA",
-   "he": "Yanuka in English - Prayer",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 1021,
-   "views": null
-  },
-  {
    "id": "bMcrLJk5O14",
    "he": "“Vayera”  the Yanuka’s  Torah.  Rav Asher Gadaev 5783",
    "channel": "LESHEM TORAH",
    "official": false,
    "kind": "search",
    "duration": 953,
-   "views": null
-  },
-  {
-   "id": "VnyBF2TXBnc",
-   "he": "Yanuka in English - Blessings Over Enjoyment",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 1321,
    "views": null
   },
   {
@@ -62700,15 +60495,6 @@
    "views": null
   },
   {
-   "id": "_cCatsdIQ3E",
-   "he": "Yanuka Rav Shlomo Yehuda Healed Cancerous Tumor? Signs and wonders",
-   "channel": "God's Soldiers Ministry",
-   "official": false,
-   "kind": "search",
-   "duration": 424,
-   "views": null
-  },
-  {
    "id": "Rhta1c5Nr3w",
    "he": "C4K No. 4 | A Messy Messianic Situation: Why Yanuka Rav Shlomo Is Not The Messiah Of Bible Prophecy",
    "channel": "The Biblical Rumble Room",
@@ -62733,33 +60519,6 @@
    "official": false,
    "kind": "search",
    "duration": 10063,
-   "views": null
-  },
-  {
-   "id": "SYsPzfBSyYE",
-   "he": "Yanuka Rav Shlomo Yehuda When The Sea Comes",
-   "channel": "God's Soldiers Ministry",
-   "official": false,
-   "kind": "search",
-   "duration": 538,
-   "views": null
-  },
-  {
-   "id": "x007sYYjasc",
-   "he": "The Yanuka and Some of His \"Supernatural\" Healings!",
-   "channel": "In The Pines Ministries",
-   "official": false,
-   "kind": "search",
-   "duration": 1600,
-   "views": null
-  },
-  {
-   "id": "JaknUPzJOkk",
-   "he": "Yanuka in English - Peace of Mind",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 902,
    "views": null
   },
   {
@@ -62871,15 +60630,6 @@
    "views": null
   },
   {
-   "id": "dUQCZJQPQUQ",
-   "he": "Yanuka in English - Midnight Rectification (Meant to be learned on Tisha B'Av)",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 1710,
-   "views": null
-  },
-  {
    "id": "d70D-d1VG_o",
    "he": "🛑 PROPHETIC: The Messiah King, Yanuka, R. Kaduri, the Rebbe and Bibi / Hebrew Roots What does the...",
    "channel": "Punto Breslev - Estudios Bíblicos",
@@ -62988,15 +60738,6 @@
    "views": null
   },
   {
-   "id": "C0QhkE493PA",
-   "he": "Livestream Zohar Study w/ @SeekersofUnity  &  @TheEsotericaChannel  - The Yanuka - 6 of 9",
-   "channel": "ESOTERICA",
-   "official": false,
-   "kind": "search",
-   "duration": 6120,
-   "views": null
-  },
-  {
    "id": "d06XOGExU9U",
    "he": "Is the Yanuka Rabbi or the Pope THE FALSE PROPHET of the End Times?",
    "channel": "Nelson Walters",
@@ -63048,15 +60789,6 @@
    "official": false,
    "kind": "search",
    "duration": 401,
-   "views": null
-  },
-  {
-   "id": "K1f1WvsOHbA",
-   "he": "Yanuka in English - Pathways of Speech 4/9",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 541,
    "views": null
   },
   {
@@ -63114,15 +60846,6 @@
    "views": null
   },
   {
-   "id": "J4XgCbLXrXk",
-   "he": "Yanuka in English - Pathways of Awe and Awareness 3/6",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 601,
-   "views": null
-  },
-  {
    "id": "hzdmb2rNqig",
    "he": "הינוקא • מה יהיה על הדור הבא - The Yanuka",
    "channel": "אהבת חינם",
@@ -63165,15 +60888,6 @@
    "official": false,
    "kind": "search",
    "duration": 302,
-   "views": null
-  },
-  {
-   "id": "RBY3x2vOZTs",
-   "he": "Yanuka in English - Pathways of Service 2/11",
-   "channel": "Rabbi Harry Rozenberg",
-   "official": false,
-   "kind": "search",
-   "duration": 305,
    "views": null
   },
   {
