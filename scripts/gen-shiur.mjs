@@ -11,6 +11,7 @@ const TR = J("data/transcripts.json");                 // { id: text }
 let CUR = {}; try { for (const v of J("public/data/curated.json")) CUR[v.id] = v; } catch {}
 let DUR = {}; try { DUR = J("public/data/durations.json"); } catch {}
 let DATES = {}; try { DATES = J("public/data/dates.json"); } catch {}
+let TEN = {}; try { TEN = J("data/titles-en.json"); } catch {}          // { hebrewTitle: englishTitle } — hand-translated
 let ALONIM = []; try { ALONIM = J("public/data/alonim.json"); } catch {}
 let TFILOT = []; try { TFILOT = J("public/data/tfilot.json"); } catch {}
 let MUSIC = []; try { MUSIC = J("public/data/music.json"); } catch {}
@@ -22,6 +23,7 @@ const esc = (s) => (s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 const clean = (s) => (s || "").replace(/&gt;|&lt;|&amp;|>>/g, " ").replace(/\[[^\]]*\]/g, " ").replace(/\s+/g, " ").trim();
 const iso = (sec) => { if (!sec) return null; const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = Math.round(sec % 60); return `PT${h ? h + "H" : ""}${m ? m + "M" : ""}${s}S`; };
 const mins = (sec) => (sec ? `${Math.max(1, Math.round(sec / 60))} min` : "");
+const enOf = (t) => { if (!t) return null; const k = t.trim(); if (TEN[k]) return TEN[k]; return /[֐-׿]/.test(t) ? null : t; };
 
 const VARIANTS = `The Yanuka — also spelled HaYanuka, Yenuka, Yanukah or Januka (הינוקא) — is HaGaon Rav Shlomo Yehuda Beeri shlit”a.`;
 
@@ -43,6 +45,7 @@ h2{font-family:Georgia,serif;color:var(--goldb);font-size:1.35rem;margin:0 0 10p
 .tr p{color:var(--soft);font-size:.98rem}
 .note{font-size:.8rem;color:var(--soft);opacity:.8;margin:10px 0 40px}
 .crumbs{font-size:.82rem;color:var(--soft);margin:18px 0 0}.crumbs a{color:var(--gold)}
+.ent{color:var(--goldb);font-size:1.08rem;font-style:italic;margin:2px 0 4px}
 .pn{display:flex;gap:12px;margin:0 0 34px;flex-wrap:wrap}
 .pn-a{flex:1;min-width:220px;background:var(--g2);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.85rem;color:var(--gold)}
 .pn-a span{display:block;color:var(--ink);font-size:.92rem;margin-top:4px}
@@ -94,11 +97,14 @@ const byChan = {}; LIB.forEach(([id, , chan], i) => { (byChan[chan] = byChan[cha
 const shiurPage = (id, title, en, chan, text, idx) => {
   const dur = DUR[id], date = DATES[id];
   const cleaned = clean(text);
-  const fallback = `A shiur by the Yanuka — HaGaon Rav Shlomo Yehuda Beeri shlit"a${chan ? " · " + chan : ""}${dur ? " · " + mins(dur) : ""}. Watch, listen, or download in audio or video — free, forever.`;
-  const desc = cleaned ? cleaned.slice(0, 155).replace(/\s+\S*$/, "") + "…" : fallback;
+  const enT = en || enOf(title);
+  const fallback = `${enT ? enT + " — a" : "A"} shiur by the Yanuka — HaGaon Rav Shlomo Yehuda Beeri shlit"a${chan ? " · " + chan : ""}${dur ? " · " + mins(dur) : ""}. Watch, listen, or download in audio or video — free, forever.`;
+  const desc = enT && cleaned ? `${enT} — ${cleaned.slice(0, 120).replace(/\s+\S*$/, "")}…`
+    : cleaned ? cleaned.slice(0, 155).replace(/\s+\S*$/, "") + "…" : fallback;
   const vo = { "@type": "VideoObject", name: title, description: cleaned ? cleaned.slice(0, 300) : fallback,
     thumbnailUrl: `${CDN}/thumb/${id}.jpg`, contentUrl: `${CDN}/video/${id}.mp4`, inLanguage: "he",
     url: `${SITE}/shiur/${id}/`, publisher: { "@type": "Organization", name: "hayanuka.life" } };
+  if (enT && enT !== title) vo.alternateName = enT;
   if (date) vo.uploadDate = date;
   if (iso(dur)) vo.duration = iso(dur);
   const ld = { "@context": "https://schema.org", "@graph": [vo,
@@ -111,14 +117,15 @@ const shiurPage = (id, title, en, chan, text, idx) => {
   const pos = sibs.findIndex((j) => j > idx); const start = pos === -1 ? Math.max(0, sibs.length - 4) : Math.max(0, pos - 2);
   const rel = sibs.slice(start, start + 4).map((j) => LIB[j]);
   const pnav = (prev || next) ? `<nav class="pn">
-${prev ? `<a class="pn-a" href="/shiur/${prev[0]}/">‹ Previous shiur<span dir="rtl">${esc(prev[1])}</span></a>` : ""}
-${next ? `<a class="pn-a" href="/shiur/${next[0]}/">Next shiur ›<span dir="rtl">${esc(next[1])}</span></a>` : ""}
+${prev ? `<a class="pn-a" href="/shiur/${prev[0]}/">‹ Previous shiur<span dir="auto">${esc(enOf(prev[1]) || prev[1])}</span></a>` : ""}
+${next ? `<a class="pn-a" href="/shiur/${next[0]}/">Next shiur ›<span dir="auto">${esc(enOf(next[1]) || next[1])}</span></a>` : ""}
 </nav>` : "";
   const relHtml = rel.length ? `<h2>More from ${esc(chan || "the library")}</h2>
-<ul class="rel">${rel.map(([rid, rhe]) => `<li><a href="/shiur/${rid}/" dir="rtl">${esc(rhe)}</a><small>${esc(chan || "")}${DUR[rid] ? " · " + mins(DUR[rid]) : ""}</small></li>`).join("")}</ul>` : "";
+<ul class="rel">${rel.map(([rid, rhe]) => { const re = enOf(rhe); return `<li><a href="/shiur/${rid}/" dir="auto">${esc(re || rhe)}</a><small>${re && re !== rhe ? `<span dir="rtl">${esc(rhe)}</span> · ` : ""}${esc(chan || "")}${DUR[rid] ? " · " + mins(DUR[rid]) : ""}</small></li>`; }).join("")}</ul>` : "";
   const body = `<nav class="crumbs"><a href="/">Home</a> › <a href="/torah/">Torah Library</a></nav>
 <h1 dir="rtl">${esc(title)}</h1>
-<p class="ch">${esc(chan || "")}${en ? " · " + esc(en) : ""}${dur ? " · " + mins(dur) : ""}${date ? " · " + date : ""}</p>
+${enT && enT !== title ? `<p class="ent">${esc(enT)}</p>` : ""}
+<p class="ch">${esc(chan || "")}${dur ? " · " + mins(dur) : ""}${date ? " · " + date : ""}</p>
 <video controls preload="metadata" playsinline poster="${CDN}/thumb/${id}.jpg"><source src="${CDN}/video/${id}.mp4" type="video/mp4"></video>
 <div class="acts">
   <a class="b g" href="/?play=${id}">▸ Open in the full player</a>
@@ -130,7 +137,7 @@ ${text ? `<h2>Transcript</h2>
 <div class="tr"><p dir="rtl" lang="he">${esc(text)}</p></div>
 <p class="note">This transcript is generated automatically from the recording and may contain errors — it's here as a helper, not a substitute for the shiur itself. An English translation is on its way.</p>` : `<p class="note">Part of the full library — every shiur of the Yanuka, gathered in one place, in English. Transcript coming soon.</p>`}
 ${relHtml}`;
-  return shell({ title: `${title} — The Yanuka, in English`, desc, path: `/shiur/${id}/`, ld, body, ogImage: `${CDN}/thumb/${id}.jpg` });
+  return shell({ title: `${enT || title} — The Yanuka, in English`, desc, path: `/shiur/${id}/`, ld, body, ogImage: `${CDN}/thumb/${id}.jpg` });
 };
 
 let n = 0; const richUrls = [], tailUrls = [];
@@ -144,7 +151,7 @@ LIB.forEach(([id, he, chan], idx) => {
 // ---------- /torah/ paginated browse (the link mesh) ----------
 const PER = 200, PAGES = Math.ceil(LIB.length / PER);
 const pgnNav = (cur) => `<nav class="pgn">${Array.from({ length: PAGES }, (_, i) => { const p = i + 1, href = p === 1 ? "/torah/" : `/torah/${p}/`; return p === cur ? `<b>${p}</b>` : `<a href="${href}">${p}</a>`; }).join("")}</nav>`;
-const listHtml = (slice) => `<ul class="list">${slice.map(([id, he, chan]) => `<li><a href="/shiur/${id}/" dir="rtl">${esc(he)}</a><small>${esc(chan || "")}${DUR[id] ? " · " + mins(DUR[id]) : ""}</small></li>`).join("\n")}</ul>`;
+const listHtml = (slice) => `<ul class="list">${slice.map(([id, he, chan]) => { const e = enOf(he); return `<li><a href="/shiur/${id}/" dir="auto">${esc(e || he)}</a><small>${e && e !== he ? `<span dir="rtl">${esc(he)}</span> · ` : ""}${esc(chan || "")}${DUR[id] ? " · " + mins(DUR[id]) : ""}</small></li>`; }).join("\n")}</ul>`;
 const hubUrls = [];
 for (let p = 1; p <= PAGES; p++) {
   const slice = LIB.slice((p - 1) * PER, p * PER);
@@ -247,5 +254,5 @@ const smap = (urls) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="h
 writeFileSync(`${root}/public/sitemap-shiurim.xml`, smap([...hubUrls, ...richUrls]));
 writeFileSync(`${root}/public/sitemap-shiurim-2.xml`, smap(tailUrls));
 writeFileSync(`${root}/public/robots.txt`,
-  `User-agent: *\nAllow: /\n\nSitemap: https://hayanuka.life/sitemap-index.xml\nSitemap: https://hayanuka.life/sitemap-shiurim.xml\n`);
-console.log(`shiur pages: ${n} | hubs: ${hubUrls.length} (torah ${PAGES}p) | sitemap wave-1: ${hubUrls.length + richUrls.length} urls | wave-2 (unreferenced): ${tailUrls.length} | robots.txt updated`);
+  `User-agent: *\nAllow: /\n\nSitemap: https://hayanuka.life/sitemap-index.xml\nSitemap: https://hayanuka.life/sitemap-shiurim.xml\nSitemap: https://hayanuka.life/sitemap-shiurim-2.xml\n`);
+console.log(`shiur pages: ${n} (en titles: ${Object.keys(TEN).length}) | hubs: ${hubUrls.length} (torah ${PAGES}p) | sitemap wave-1: ${hubUrls.length + richUrls.length} | wave-2 (LIVE in robots): ${tailUrls.length} | robots.txt updated`);
