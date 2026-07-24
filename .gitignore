@@ -9,3 +9,10 @@ nginx.conf
 
 public/shiur/
 public/sitemap-shiurim.xml
+
+public/torah/
+public/niggunim/
+public/alonim/
+public/tefillos/
+public/about-the-yanuka/
+public/sitemap-shiurim-2.xml

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "life.hayanuka.app",
+      "sha256_cert_fingerprints": [
+        "02:2A:51:CF:5B:7D:95:27:61:C3:9A:44:25:E7:27:DB:62:DA:04:40:2D:D8:CE:14:4D:9C:E7:AA:87:F5:41:6A"
+      ]
+    }
+  }
+]
